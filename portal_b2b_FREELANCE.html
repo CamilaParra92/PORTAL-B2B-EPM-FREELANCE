@@ -1040,4 +1040,23 @@ brands.forEach(function(brand){
 });
 })();
 </script>
+<script id="_min180kScript">
+(function(){
+var MIN=180000;
+function fmt(n){return String.fromCharCode(36)+Math.round(n).toLocaleString('es-CL');}
+function tot(){try{return typeof calcTotal==='function'?calcTotal():0;}catch(e){return 0;}}
+var s=document.createElement('div');s.id='_min180kSticky';
+var hd=document.querySelector('header');
+s.style.cssText='position:fixed;top:'+(hd?hd.offsetHeight:60)+'px;left:0;right:0;z-index:9999;font-family:sans-serif;font-size:.85rem;pointer-events:none;box-shadow:0 2px 6px rgba(0,0,0,.15)';
+document.body.appendChild(s);
+function upd(){var t=tot(),f=Math.max(0,MIN-t);
+s.innerHTML=f<=0?'<div style="background:#15803d;color:#fff;padding:7px 16px;text-align:center;font-weight:700">&#x2705; Mínimo de compra alcanzado ('+fmt(t)+') — puedes terminar tu pedido</div>':'<div style="background:#fff7ed;border-bottom:2px solid #f97316;padding:7px 16px;display:flex;justify-content:space-between;align-items:center"><span>⚠️ Compra mínima '+fmt(MIN)+' — faltan <b>'+fmt(f)+'</b></span><span style="color:#92400e">'+fmt(t)+' / '+fmt(MIN)+'</span></div>';
+var pb=document.getElementById('previewBtn');if(pb&&f>0){pb.style.opacity='.5';}}
+document.addEventListener('click',function(e){var b=e.target;var ids={previewBtn:1,submitBtn:1};
+var h=(b.id&&ids[b.id])?b:((b.closest&&(b.closest('#previewBtn')||b.closest('#submitBtn')))||null);
+if(!h)return;var t=tot();
+if(t<MIN){e.stopImmediatePropagation();e.preventDefault();alert('⚠️ No puedes terminar el pedido aún\n\nLa compra mínima es de '+fmt(MIN)+' (total con IVA).\nTu carrito lleva '+fmt(t)+', te faltan '+fmt(MIN-t)+'.\n\nAgrega más productos y vuelve a intentarlo.');}},true);
+upd();setInterval(upd,500);
+})();
+</script>
 </body></html>
