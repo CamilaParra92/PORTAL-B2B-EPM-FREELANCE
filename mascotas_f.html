@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<!-- deploy:2026-08-07 08:16 -->
+<!-- saved from url=(0051)file:///C:/Users/camif/Downloads/portal_b2b_v6.html -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portal B2B MASCOTAS — EPM</title>
+<style>
+:root{--pr:#1a0a2e;--ac:#e91e8c;--ac2:#1a0a2e;--bg:#faf9f7;--sf:#fff;--bo:#e5e2de;--tx:#1a0a2e;--mu:#7a7080;--ok:#15803d;--okb:#f0fdf4;--wa:#92400e;--wab:#fffbeb}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--tx);min-height:100vh;font-size:14px}
+header{background:var(--pr);color:#fff;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:60px;position:sticky;top:0;z-index:200;box-shadow:0 2px 12px rgba(26,10,46,.25)}
+.logo-txt{font-size:1.1rem;font-weight:800;color:#fff}.logo-txt span{color:var(--ac)}
+.logo-sub{font-size:.6rem;font-weight:500;color:rgba(255,255,255,.5);letter-spacing:1px;text-transform:uppercase}
+.hcart{background:var(--ac);color:#fff;border:none;padding:.45rem 1.1rem;border-radius:7px;font-size:.82rem;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:7px}.hcart:hover{opacity:.9}
+.hcnt{background:#fff;color:var(--ac);border-radius:50%;width:19px;height:19px;display:flex;align-items:center;justify-content:center;font-size:.68rem;font-weight:800}
+.wrap{max-width:1320px;margin:0 auto;padding:1.25rem 1rem 80px}
+.steps{display:flex;margin-bottom:1.5rem;background:var(--sf);border:1px solid var(--bo);border-radius:10px;overflow:hidden}
+.stp{flex:1;padding:.8rem .5rem;text-align:center;font-size:.75rem;color:var(--mu);border-right:1px solid var(--bo);cursor:pointer;user-select:none}
+.stp:last-child{border-right:none}.stp.active{background:var(--pr);color:#fff;font-weight:700}.stp.done{background:var(--okb);color:var(--ok)}
+.stp-n{font-size:.95rem;font-weight:800;display:block;margin-bottom:2px}
+.panel{display:none}.panel.active{display:block}
+/* FORM */
+.fcard{background:var(--sf);border:1px solid var(--bo);border-radius:12px;padding:1.4rem;margin-bottom:1rem}
+.fcard h2{font-size:.92rem;font-weight:800;margin-bottom:1.1rem;color:var(--pr);border-bottom:2px solid var(--ac);padding-bottom:.65rem}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.fg{display:flex;flex-direction:column;gap:4px}.fg.full{grid-column:1/-1}
+label{font-size:.7rem;font-weight:700;color:var(--mu);text-transform:uppercase;letter-spacing:.5px}
+input,select,textarea{border:1.5px solid var(--bo);border-radius:7px;padding:.55rem .8rem;font-size:.88rem;font-family:inherit;color:var(--tx);background:var(--bg);transition:border-color .15s;width:100%}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--ac);background:#fff;box-shadow:0 0 0 3px rgba(233,30,140,.08)}
+input.err{border-color:#dc2626!important;background:#fff5f5!important}
+input.good{border-color:#16a34a!important}
+.fhint{font-size:.68rem;color:var(--mu);margin-top:2px}
+.ferr{font-size:.68rem;color:#dc2626;margin-top:2px;font-weight:600;display:none}
+input.err ~ .ferr{display:block}
+input.err ~ .fhint{display:none}
+textarea{resize:vertical;min-height:60px}
+.radio-group{display:flex;gap:.75rem;margin-top:2px}
+.radio-opt{display:flex;align-items:center;gap:6px;cursor:pointer;padding:.5rem .9rem;border:1.5px solid var(--bo);border-radius:7px;background:var(--bg);font-size:.85rem;font-weight:600;transition:all .15s}
+.radio-opt.selected{border-color:var(--ac);background:rgba(233,30,140,.06);color:var(--ac)}
+.radio-opt input[type=radio]{width:14px;height:14px;accent-color:var(--ac);flex-shrink:0}
+.btn{background:var(--ac);color:#fff;border:none;padding:.7rem 1.6rem;border-radius:8px;font-size:.88rem;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:7px;box-shadow:0 2px 8px rgba(233,30,140,.3)}.btn:hover{opacity:.9}.btn:disabled{opacity:.45;cursor:not-allowed;box-shadow:none}
+.btn2{background:transparent;color:var(--pr);border:1.5px solid var(--bo);padding:.7rem 1.6rem;border-radius:8px;font-size:.88rem;font-weight:600;cursor:pointer}.btn2:hover{border-color:var(--pr)}
+.btn-outline{background:transparent;color:var(--ok);border:1.5px solid var(--ok);padding:.6rem 1.2rem;border-radius:8px;font-size:.82rem;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:6px}.btn-outline:hover{background:var(--okb)}
+/* CATALOG */
+.catbar{display:flex;gap:.75rem;margin-bottom:1rem;align-items:center;flex-wrap:wrap}
+.srch{flex:0 0 220px;min-width:0;position:relative}.srch input{padding-left:2.2rem;background:#fff}
+.srch::before{content:'🔍';position:absolute;left:.7rem;top:50%;transform:translateY(-50%);font-size:.88rem;pointer-events:none}
+.brands-bar{display:flex;gap:.4rem;flex-wrap:wrap;flex:1}
+.bbtn{padding:.3rem .85rem;border-radius:16px;border:1.5px solid var(--bo);background:#fff;font-size:.73rem;cursor:pointer;color:var(--mu);font-weight:600;white-space:nowrap;transition:all .15s}
+.bbtn:hover:not(.active){border-color:var(--ac);color:var(--ac)}
+.bbtn.active{color:#fff;border-color:transparent;box-shadow:0 2px 6px rgba(0,0,0,.15)}
+.bbtn[data-b="all"].active{background:var(--pr)}
+.bbtn[data-b="Nail Pro"].active{background:#1a0a2e}
+.bbtn[data-b="Go Nails"].active,.bbtn[data-b="Go Hair"].active,.bbtn[data-b="Go Paw"].active{background:#b01060}
+.bbtn[data-b="Go Living"].active{background:#c8a96e;color:#fff}
+.bbtn[data-b="Bluesky"].active{background:#b8960c;color:#000}
+.bbtn[data-b="Artistic"].active{background:#333}
+.bbtn[data-b="Avry Beauty"].active{background:#555}
+.bbtn[data-b="Ambar"].active{background:#C8880A}
+.bbtn[data-b="The Fruit Company"].active{background:#D45820}
+.bbtn[data-b="Aroma Home"].active{background:#7B5EA7}
+/* BRAND_COLORS_V1 */
+.cats-bar{display:flex;gap:.4rem;flex-wrap:wrap;align-items:center}
+.cats-bar .clabel{font-size:.7rem;font-weight:700;color:var(--mu);text-transform:uppercase;letter-spacing:.4px;margin-right:4px}
+.cbtn{padding:.28rem .75rem;border-radius:14px;border:1.5px solid var(--bo);background:var(--bg);font-size:.72rem;cursor:pointer;color:var(--mu);font-weight:600;transition:all .15s;white-space:nowrap}
+.cbtn:hover:not(.active){border-color:var(--ac);color:var(--ac)}
+.cbtn.active{background:var(--pr);color:#fff;border-color:var(--pr)}
+.mban{background:var(--wab);border:1px solid #fcd34d;border-radius:8px;padding:.5rem 1rem;font-size:.73rem;color:var(--wa);margin-bottom:.85rem;line-height:1.7}
+/* PRODUCT CARDS */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(178px,1fr));gap:.8rem}
+.pcard{background:#fff;border:1.5px solid var(--bo);border-radius:11px;overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .18s,transform .15s}
+.pcard:hover{box-shadow:0 6px 18px rgba(26,10,46,.1);transform:translateY(-2px)}
+.pimg-wrap{width:100%;height:128px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.pimg-wrap .pimg-real{width:100%;height:100%;object-fit:contain;padding:6px;position:absolute;top:0;left:0}
+.pimg-wrap .pimg-real.hidden{display:none}
+.pswatch{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px}
+.pswatch-c{width:54px;height:54px;border-radius:50%;border:3px solid rgba(255,255,255,.8);box-shadow:0 2px 10px rgba(0,0,0,.18)}
+.pswatch-l{font-size:.58rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;opacity:.55}
+.brand-logo-wrap{height:28px;display:flex;align-items:center;padding:0 .7rem;margin-bottom:2px}
+.brand-logo-wrap img{max-height:22px;max-width:80px;object-fit:contain}
+.pbody{padding:.7rem;display:flex;flex-direction:column;gap:.28rem;flex:1}
+.pbrand-tag{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:2px 8px;border-radius:10px;display:inline-block;width:fit-content}
+.pname{font-size:.78rem;font-weight:700;color:var(--pr);line-height:1.35;flex:1}
+.psku{font-size:.62rem;color:var(--mu)}
+.pps{font-size:.67rem;color:var(--mu);text-decoration:line-through}
+.ppm{font-size:.96rem;font-weight:800;color:var(--pr)}
+.qrow{display:flex;align-items:center;gap:5px;margin-top:.4rem}
+.qbtn{width:27px;height:27px;min-width:27px;border-radius:50%;border:1.5px solid var(--bo);background:#fff;font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;font-weight:700;transition:all .15s}.qbtn:hover{border-color:var(--ac);color:var(--ac)}
+.qinp{width:42px;text-align:center;padding:.2rem;font-size:.82rem;font-weight:700;border-radius:5px}
+.abtn{background:var(--pr);color:#fff;border:none;border-radius:6px;padding:.42rem;font-size:.72rem;font-weight:700;cursor:pointer;width:100%;margin-top:4px}.abtn:hover{opacity:.85}.abtn.added{background:var(--ok)}
+.unavail-tag{margin-top:8px;background:#f3f4f6;border:1.5px solid #e5e7eb;border-radius:7px;padding:.45rem;font-size:.72rem;font-weight:700;text-align:center;color:#9ca3af}
+.nores{text-align:center;padding:2.5rem;color:var(--mu);grid-column:1/-1}
+.pag{display:flex;gap:.3rem;align-items:center;justify-content:flex-end;margin-top:.85rem;flex-wrap:wrap}
+.pbtn2{padding:.3rem .6rem;border-radius:5px;border:1px solid var(--bo);background:#fff;font-size:.75rem;cursor:pointer;min-width:30px;text-align:center}.pbtn2.active{background:var(--pr);color:#fff;border-color:var(--pr)}.pbtn2:disabled{opacity:.4;cursor:default}
+.pginfo{font-size:.75rem;color:var(--mu)}
+.map-preview{margin-top:8px;border-radius:10px;overflow:hidden;border:2px solid var(--ac);display:none;background:#f5f4f1}
+.map-preview iframe{width:100%;height:220px;border:none;display:block}
+.map-preview .map-addr{padding:8px 12px;font-size:.78rem;font-weight:600;color:var(--pr);background:#fff0f8;border-top:1px solid #f9a8d4;display:flex;align-items:center;gap:6px}
+.map-btn{background:#e91e8c;color:#fff;border:none;border-radius:7px;padding:.48rem .9rem;cursor:pointer;font-size:.75rem;font-weight:700;display:inline-flex;align-items:center;gap:5px;margin-top:6px;transition:opacity .15s}.map-btn:hover{opacity:.85}
+/* CART */
+.clayout{display:grid;grid-template-columns:1fr 345px;gap:1.25rem;align-items:start}
+.ctbl{width:100%;border-collapse:collapse}
+.ctbl th{text-align:left;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--mu);padding:.65rem .9rem;border-bottom:2px solid var(--bo)}
+.ctbl td{padding:.65rem .9rem;border-bottom:1px solid var(--bo);vertical-align:middle;font-size:.82rem}
+.ctbl tr:last-child td{border-bottom:none}
+.rmbtn{background:none;border:none;color:var(--mu);cursor:pointer;padding:3px;font-size:1rem;transition:color .15s}.rmbtn:hover{color:var(--ac)}
+.osum{background:#fff;border:1.5px solid var(--bo);border-radius:12px;padding:1.25rem;position:sticky;top:68px}
+.osum h3{font-size:.88rem;font-weight:800;margin-bottom:.9rem;padding-bottom:.65rem;border-bottom:2px solid var(--ac)}
+.srow{display:flex;justify-content:space-between;font-size:.76rem;margin-bottom:.4rem;color:var(--mu)}
+.stot{display:flex;justify-content:space-between;font-size:.95rem;font-weight:800;color:var(--pr);padding-top:.65rem;border-top:2px solid var(--bo);margin-top:.5rem}
+.cempty{text-align:center;padding:3rem;color:var(--mu)}
+.cosump{background:var(--bg);border-radius:8px;padding:.75rem .9rem;margin-bottom:.85rem;font-size:.74rem;color:var(--mu);line-height:1.85;border:1px solid var(--bo)}
+.cosump strong{color:var(--pr);font-size:.88rem;display:block;margin-bottom:3px}
+.bblk{background:var(--bg);border-radius:7px;padding:.5rem .75rem;margin-bottom:.45rem;font-size:.77rem;border:1px solid var(--bo)}
+.bblk-h{display:flex;justify-content:space-between;font-weight:700;color:var(--pr);margin-bottom:2px}
+.bwarn{color:var(--wa);font-size:.68rem;font-weight:600}.bok{color:var(--ok);font-size:.68rem;font-weight:600}
+.alert{padding:.65rem .9rem;border-radius:7px;font-size:.77rem;margin-bottom:.5rem;font-weight:600;border:1px solid}
+.alert.warn{background:var(--wab);color:var(--wa);border-color:#fcd34d}
+.alert.err{background:#fef2f2;color:#991b1b;border-color:#fca5a5}
+/* MODAL */
+.modal-bg{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:500;display:flex;align-items:center;justify-content:center;padding:1rem}
+.modal{background:#fff;border-radius:14px;max-width:680px;width:100%;max-height:90vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,.3)}
+.modal-header{padding:1.25rem 1.5rem;border-bottom:1px solid var(--bo);display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;background:#fff;z-index:1}
+.modal-header h3{font-size:1rem;font-weight:800}
+.modal-body{padding:1.5rem}
+.modal-close{background:none;border:none;font-size:1.4rem;cursor:pointer;color:var(--mu)}
+.prev-sec{margin-bottom:1.25rem}
+.prev-sec h4{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--mu);margin-bottom:.65rem;padding-bottom:.4rem;border-bottom:1px solid var(--bo)}
+.prev-row{display:flex;gap:.5rem;font-size:.83rem;margin-bottom:.35rem}
+.prev-row .lbl{color:var(--mu);min-width:140px;font-weight:600}
+.prev-tbl{width:100%;border-collapse:collapse;font-size:.8rem;margin-top:.5rem}
+.prev-tbl th{background:var(--pr);color:#fff;padding:.5rem .75rem;text-align:left;font-size:.7rem;font-weight:700;text-transform:uppercase}
+.prev-tbl td{padding:.5rem .75rem;border-bottom:1px solid var(--bo)}
+.prev-tbl .bsep{background:var(--bg);font-size:.7rem;font-weight:700;color:var(--mu);text-transform:uppercase;letter-spacing:.4px}
+.prev-tot{background:var(--pr);color:#fff;border-radius:8px;padding:1rem 1.25rem;margin-top:1rem}
+.prev-tot .row{display:flex;justify-content:space-between;font-size:.83rem;margin-bottom:.3rem;opacity:.8}
+.prev-tot .row.main{font-size:1.05rem;font-weight:800;opacity:1;border-top:1px solid rgba(255,255,255,.2);padding-top:.5rem;margin-top:.5rem}
+/* SUCCESS */
+.success-card{text-align:center;background:#fff;border-radius:14px;padding:2.5rem 1.5rem;border:1px solid var(--bo);max-width:560px;margin:0 auto}
+.sico{font-size:3.5rem;margin-bottom:.75rem}
+.success-card h2{font-size:1.25rem;font-weight:800;color:var(--pr);margin-bottom:.6rem}
+.success-card p{color:var(--mu);font-size:.88rem;line-height:1.6;margin-bottom:.5rem}
+.ocode{background:var(--bg);padding:.6rem 1.25rem;border-radius:8px;font-family:monospace;font-size:1rem;font-weight:700;color:var(--pr);margin:1rem auto;display:inline-block;border:1px solid var(--bo)}
+@media(max-width:768px){.fgrid{grid-template-columns:1fr}.clayout{grid-template-columns:1fr}.pgrid{grid-template-columns:repeat(auto-fill,minmax(148px,1fr))}}
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <div class="logo-txt">EPM <span>Mayorista</span></div>
+    <div class="logo-sub">Portal B2B</div>
+  </div>
+  <button class="hcart" onclick="goStep(2)">🛒 Mi Pedido <span class="hcnt" id="hcnt">0</span></button>
+</header>
+<div class="wrap">
+  <div class="steps">
+    <div class="stp active" id="s0" onclick="goStep(0)"><span class="stp-n">1</span>Identificación</div>
+    <div class="stp" id="s1" onclick="if(okEmp)goStep(1)"><span class="stp-n">2</span>Catálogo</div>
+    <div class="stp" id="s2" onclick="if(okEmp)goStep(2)"><span class="stp-n">3</span>Datos y Revisar</div>
+    <div class="stp" id="s3"><span class="stp-n">4</span>Listo ✓</div>
+  </div>
+
+  <!-- P0: IDENTIFICACIÓN RÁPIDA -->
+  <div class="panel active" id="p0">
+    <div class="fcard">
+      <h2>👤 ¿Quién eres?</h2>
+      <p style="font-size:.84rem;color:var(--mu);margin-bottom:1rem">Ingresa tus datos básicos para comenzar a comprar. Completarás el resto antes de confirmar tu pedido.</p>
+      <input type="hidden" id="q_rut" value="">
+      <div class="fgrid">
+        <div class="fg full">
+          <label>Nombre de la persona natural *</label>
+          <input id="q_nombre" placeholder="Juan Pérez González" oninput="liveVal(this,&#39;name&#39;)">
+          <span class="fhint">Ej: Juan Pérez González</span>
+          <span class="ferr">Ingresa nombre y apellido</span>
+        </div>
+        <div class="fg full">
+          <label>Correo electrónico *</label>
+          <input type="email" id="q_email" placeholder="juan@gmail.com" oninput="liveVal(this,&#39;email&#39;)" onblur="checkEmailDomain(this.value)">
+          <span class="fhint">Aquí recibirás el respaldo de tu pedido</span>
+          <span class="ferr">Email inválido</span>
+          <span id="emailConfirm" style="font-size:.76rem;color:#15803d;font-weight:600;margin-top:3px;display:none"></span>
+          <span id="emailWarn" style="font-size:.76rem;color:#b45309;font-weight:600;margin-top:3px;display:none"></span>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:flex-end;margin-top:.75rem">
+      <button class="btn" onclick="nextToProducts()">Ir al catálogo →</button>
+    </div>
+  </div>
+
+  <!-- P1: CATÁLOGO -->
+  <div class="panel" id="p1">
+    <div id="minBanners"><div style="background:#1a0a2e;padding:10px 18px;border-radius:12px 12px 0 0;display:flex;align-items:center;gap:8px"><span style="color:#e91e8c;font-weight:800;font-size:.88rem;text-transform:uppercase;letter-spacing:.5px">! Condiciones de Compra</span><span style="color:rgba(255,255,255,.5);font-size:.73rem">— Lee antes de agregar productos</span></div><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));border:2px solid #1a0a2e;border-top:none;border-radius:0 0 12px 12px;overflow:hidden;margin-bottom:1rem"><div style="padding:14px 16px;background:#fff;border-right:1px solid #e0deda"><div style="font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.8px;color:#e91e8c;margin-bottom:6px">Nail Pro &amp; Avry Beauty</div><div style="font-size:.8rem;color:#1a0a2e;line-height:1.7">Min. pedido: <b>$180.000</b><br><span style="color:#15803d;font-weight:700">5% dcto</span> sobre <b>$360.000</b><br><span style="color:#15803d;font-weight:700">10% dcto</span> sobre <b>$720.000</b><br><span style="font-size:.7rem;color:#999">(Descuento aplica sobre total del pedido)</span></div></div><div style="padding:14px 16px;background:#fff;border-right:1px solid #e0deda"><div style="font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.8px;color:#c8a415;margin-bottom:6px">Bluesky</div><div style="font-size:.8rem;color:#1a0a2e;line-height:1.7">Min. de compra: <b>$100.000</b><br><span style="color:#15803d;font-weight:700">5% dcto</span> sobre <b>$800.000</b><br><span style="font-size:.7rem;color:#999">Precio fijo bajo ese monto</span></div></div><div style="padding:14px 16px;background:#fff"><div style="font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.8px;color:#b01060;margin-bottom:6px">MARCAS GO + HOGAR</div><div style="font-size:.8rem;color:#1a0a2e;line-height:1.7">Min. combinado: <b>$80.000</b><br><span style="color:#b01060;font-weight:800">PRECIO FIJO</span> — Sin descuentos<br><span style="font-size:.7rem;color:#999">Go Nails · Go Hair · Go Paw · Go Living · Ambar · The Fruit Company · Aroma Home</span></div></div><div style="padding:14px 16px;background:#fff"><div style="font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.8px;color:#444;margin-bottom:6px">Artistic Nails</div><div style="font-size:.8rem;color:#1a0a2e;line-height:1.7">Min. de compra: <b>$100.000</b><br><span style="color:#444;font-weight:800">PRECIO FIJO</span> — Sin descuentos<br><span style="font-size:.7rem;color:#999">Suma para el dcto de Nail Pro/Avry</span></div></div></div><div style="background:#fffbeb;border:1px solid #fcd34d;border-radius:8px;padding:8px 14px;margin-bottom:.85rem;font-size:.75rem;color:#92400e;font-weight:700;text-align:center">Minimo total del pedido: $180.000 — Bluesky NO suma para el descuento de Nail Pro/Avry. Todo lo demas si.</div></div>
+    <div class="catbar">
+      <div class="srch"><input id="srchInp" placeholder="Buscar por nombre o SKU..." oninput="doFilter()"></div>
+      <div class="brands-bar" id="brandsBar"><button class="bbtn active" data-b="all" onclick="setBrand(&#39;all&#39;,this)">Todos</button></div>
+    </div>
+    <div class="cats-bar" id="catsBar" style="display: flex; flex-wrap: wrap; margin-bottom: 0.85rem; padding: 0.75rem 1rem; background: rgb(255, 255, 255); border: 1px solid var(--bo); border-radius: 9px;"><span class="clabel">Categoría:</span><button class="cbtn active" onclick="setCat(this)">Todas</button><button class="cbtn" onclick="setCat(this)">ACEITE CUTICULA</button><button class="cbtn" onclick="setCat(this)">ACRILICOS</button><button class="cbtn" onclick="setCat(this)">CAPILAR</button><button class="cbtn" onclick="setCat(this)">CREMA CORPORAL</button><button class="cbtn" onclick="setCat(this)">CREMA MANOS Y PIES</button><button class="cbtn" onclick="setCat(this)">DIFUSOR AROMA</button><button class="cbtn" onclick="setCat(this)">EFECTOS</button><button class="cbtn" onclick="setCat(this)">ESMALTE PERMANENTE 15ML</button><button class="cbtn" onclick="setCat(this)">ESMALTE PERMANENTE 8ML</button><button class="cbtn" onclick="setCat(this)">ESMALTE TRADICIONAL 15ML</button><button class="cbtn" onclick="setCat(this)">ESMALTES ESPECIALES</button><button class="cbtn" onclick="setCat(this)">EXFOLIANTE</button><button class="cbtn" onclick="setCat(this)">FRAGANCIA CORPORAL</button><button class="cbtn" onclick="setCat(this)">GEL CONSTRUCTOR</button><button class="cbtn" onclick="setCat(this)">GEL PAINT</button><button class="cbtn" onclick="setCat(this)">HIDRATACION</button><button class="cbtn" onclick="setCat(this)">HIGIENIZANTE</button><button class="cbtn" onclick="setCat(this)">HOME SPRAY</button><button class="cbtn" onclick="setCat(this)">INSUMOS MANICURE</button><button class="cbtn" onclick="setCat(this)">JELLY SPA</button><button class="cbtn" onclick="setCat(this)">MANTECA CORPORAL</button><button class="cbtn" onclick="setCat(this)">MASCOTAS</button><button class="cbtn" onclick="setCat(this)">POLYGEL</button><button class="cbtn" onclick="setCat(this)">PREPARADORES</button><button class="cbtn" onclick="setCat(this)">SKIN</button><button class="cbtn" onclick="setCat(this)">SOFT GEL</button></div>
+    <div id="resultInfo" style="font-size:.8rem;color:var(--mu);padding:.3rem 0 .5rem;font-weight:600;min-height:1.4rem;"></div><div class="pgrid" id="pgrid"><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="data:image/jpeg;base64,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" loading="lazy" data-k="EP_NP_BASE100"><div class="pswatch" id="sw-EP_NP_BASE100" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#b0b0b0"></div><div class="pswatch-l">EP-NP-BASE100</div></div></div><div class="pbody"><div class="pname">NAIL PRO Esmalte Permanente - Base Refill (100ml)</div><div class="psku">SKU: EP-NP-BASE100</div><div class="pps">PVP sugerido: $23.990</div><div class="ppm">$14.990 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;EP-NP-BASE100&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-EP_NP_BASE100" onchange="setQ(&#39;EP-NP-BASE100&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;EP-NP-BASE100&#39;,1)">+</button></div><button class="abtn" id="ab-EP_NP_BASE100" onclick="addC(&#39;EP-NP-BASE100&#39;)">Agregar</button></div></div><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="./Portal Pedidos B2B — EPM final_files/ImagenesBlancoWEBNP_2.png" loading="lazy" data-k="BR_NP_FRENCH002"><div class="pswatch" id="sw-BR_NP_FRENCH002" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#b0b0b0"></div><div class="pswatch-l">BR-NP-FRENCH002</div></div></div><div class="pbody"><div class="pname">NAIL PRO Esmalte Permanente Base Rubber FRENCH002</div><div class="psku">SKU: BR-NP-FRENCH002</div><div class="pps">PVP sugerido: $4.990</div><div class="ppm">$3.310 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;BR-NP-FRENCH002&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-BR_NP_FRENCH002" onchange="setQ(&#39;BR-NP-FRENCH002&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;BR-NP-FRENCH002&#39;,1)">+</button></div><button class="abtn" id="ab-BR_NP_FRENCH002" onclick="addC(&#39;BR-NP-FRENCH002&#39;)">Agregar</button></div></div><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="./Portal Pedidos B2B — EPM final_files/Imagenes_Blanco_WEB_NP_20_b7b9be9f-ae3a-4038-b412-bfdaaf23bb1e.png" loading="lazy" data-k="BR_NP_FRENCH018"><div class="pswatch" id="sw-BR_NP_FRENCH018" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#b0b0b0"></div><div class="pswatch-l">BR-NP-FRENCH018</div></div></div><div class="pbody"><div class="pname">NAIL PRO Esmalte Permanente Base Rubber FRENCH018</div><div class="psku">SKU: BR-NP-FRENCH018</div><div class="pps">PVP sugerido: $4.990</div><div class="ppm">$3.310 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;BR-NP-FRENCH018&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-BR_NP_FRENCH018" onchange="setQ(&#39;BR-NP-FRENCH018&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;BR-NP-FRENCH018&#39;,1)">+</button></div><button class="abtn" id="ab-BR_NP_FRENCH018" onclick="addC(&#39;BR-NP-FRENCH018&#39;)">Agregar</button></div></div><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="./Portal Pedidos B2B — EPM final_files/ImagenesBlancoWEBNP.png" loading="lazy" data-k="BR_NP_FRENCH034"><div class="pswatch" id="sw-BR_NP_FRENCH034" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#b0b0b0"></div><div class="pswatch-l">BR-NP-FRENCH034</div></div></div><div class="pbody"><div class="pname">NAIL PRO Esmalte Permanente Base Rubber FRENCH034</div><div class="psku">SKU: BR-NP-FRENCH034</div><div class="pps">PVP sugerido: $4.990</div><div class="ppm">$3.310 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;BR-NP-FRENCH034&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-BR_NP_FRENCH034" onchange="setQ(&#39;BR-NP-FRENCH034&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;BR-NP-FRENCH034&#39;,1)">+</button></div><button class="abtn" id="ab-BR_NP_FRENCH034" onclick="addC(&#39;BR-NP-FRENCH034&#39;)">Agregar</button></div></div><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="./Portal Pedidos B2B — EPM final_files/Imagenes_Blanco_WEB_NP_21_af88327f-489a-4d00-bfef-5eceb5f20927.png" loading="lazy" data-k="BR_NP_FRENCH064"><div class="pswatch" id="sw-BR_NP_FRENCH064" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#b0b0b0"></div><div class="pswatch-l">BR-NP-FRENCH064</div></div></div><div class="pbody"><div class="pname">NAIL PRO Esmalte Permanente Base Rubber FRENCH064</div><div class="psku">SKU: BR-NP-FRENCH064</div><div class="pps">PVP sugerido: $4.990</div><div class="ppm">$3.310 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;BR-NP-FRENCH064&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-BR_NP_FRENCH064" onchange="setQ(&#39;BR-NP-FRENCH064&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;BR-NP-FRENCH064&#39;,1)">+</button></div><button class="abtn" id="ab-BR_NP_FRENCH064" onclick="addC(&#39;BR-NP-FRENCH064&#39;)">Agregar</button></div></div><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="./Portal Pedidos B2B — EPM final_files/ImagenesBlancoWEBNP_3.png" loading="lazy" data-k="NP_BG_001"><div class="pswatch" id="sw-NP_BG_001" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#b0b0b0"></div><div class="pswatch-l">NP-BG-001</div></div></div><div class="pbody"><div class="pname">NAIL PRO Esmalte Permanente Builder Gel 001 15ml (gel constructor en pote)</div><div class="psku">SKU: NP-BG-001</div><div class="pps">PVP sugerido: $3.990</div><div class="ppm">$2.990 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;NP-BG-001&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-NP_BG_001" onchange="setQ(&#39;NP-BG-001&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;NP-BG-001&#39;,1)">+</button></div><button class="abtn" id="ab-NP_BG_001" onclick="addC(&#39;NP-BG-001&#39;)">Agregar</button></div></div><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="./Portal Pedidos B2B — EPM final_files/ImagenesBlancoWEBNP_4.png" loading="lazy" data-k="NP_BG_002"><div class="pswatch" id="sw-NP_BG_002" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#b0b0b0"></div><div class="pswatch-l">NP-BG-002</div></div></div><div class="pbody"><div class="pname">NAIL PRO Esmalte Permanente Builder Gel 002 15ml (gel constructor en pote)</div><div class="psku">SKU: NP-BG-002</div><div class="pps">PVP sugerido: $3.990</div><div class="ppm">$2.990 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;NP-BG-002&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-NP_BG_002" onchange="setQ(&#39;NP-BG-002&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;NP-BG-002&#39;,1)">+</button></div><button class="abtn" id="ab-NP_BG_002" onclick="addC(&#39;NP-BG-002&#39;)">Agregar</button></div></div><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="./Portal Pedidos B2B — EPM final_files/ImagenesBlancoWEBNP_5.png" loading="lazy" data-k="NP_BG_003"><div class="pswatch" id="sw-NP_BG_003" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#b0b0b0"></div><div class="pswatch-l">NP-BG-003</div></div></div><div class="pbody"><div class="pname">NAIL PRO Esmalte Permanente Builder Gel 003 15ml (gel constructor en pote)</div><div class="psku">SKU: NP-BG-003</div><div class="pps">PVP sugerido: $3.990</div><div class="ppm">$2.990 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;NP-BG-003&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-NP_BG_003" onchange="setQ(&#39;NP-BG-003&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;NP-BG-003&#39;,1)">+</button></div><button class="abtn" id="ab-NP_BG_003" onclick="addC(&#39;NP-BG-003&#39;)">Agregar</button></div></div><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="./Portal Pedidos B2B — EPM final_files/nail-pro-builder-gel-15ml-clear_builderclear_1.jpg" loading="lazy" data-k="NP_BG_CLEAR"><div class="pswatch" id="sw-NP_BG_CLEAR" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#b0b0b0"></div><div class="pswatch-l">NP-BG-CLEAR</div></div></div><div class="pbody"><div class="pname">NAIL PRO Esmalte Permanente Builder Gel Clear 15ml (gel constructor en pote)</div><div class="psku">SKU: NP-BG-CLEAR</div><div class="pps">PVP sugerido: $3.990</div><div class="ppm">$2.990 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;NP-BG-CLEAR&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-NP_BG_CLEAR" onchange="setQ(&#39;NP-BG-CLEAR&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;NP-BG-CLEAR&#39;,1)">+</button></div><button class="abtn" id="ab-NP_BG_CLEAR" onclick="addC(&#39;NP-BG-CLEAR&#39;)">Agregar</button></div></div><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="./Portal Pedidos B2B — EPM final_files/nail-pro-builder-gel-15ml-cover-pink_4_2.png" loading="lazy" data-k="NP_BG_COVERPINK"><div class="pswatch" id="sw-NP_BG_COVERPINK" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#f06292"></div><div class="pswatch-l">NP-BG-COVERPINK</div></div></div><div class="pbody"><div class="pname">NAIL PRO Esmalte Permanente Builder Gel Cover Pink 15ml (gel constructor en pote)</div><div class="psku">SKU: NP-BG-COVERPINK</div><div class="pps">PVP sugerido: $3.990</div><div class="ppm">$2.990 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;NP-BG-COVERPINK&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-NP_BG_COVERPINK" onchange="setQ(&#39;NP-BG-COVERPINK&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;NP-BG-COVERPINK&#39;,1)">+</button></div><button class="abtn" id="ab-NP_BG_COVERPINK" onclick="addC(&#39;NP-BG-COVERPINK&#39;)">Agregar</button></div></div><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="./Portal Pedidos B2B — EPM final_files/nail-pro-builder-gel-15ml-pink_3_1.png" loading="lazy" data-k="NP_BG_PINK"><div class="pswatch" id="sw-NP_BG_PINK" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#f06292"></div><div class="pswatch-l">NP-BG-PINK</div></div></div><div class="pbody"><div class="pname">NAIL PRO Esmalte Permanente Builder Gel Pink 15ml (gel constructor en pote)</div><div class="psku">SKU: NP-BG-PINK</div><div class="pps">PVP sugerido: $3.990</div><div class="ppm">$2.990 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;NP-BG-PINK&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-NP_BG_PINK" onchange="setQ(&#39;NP-BG-PINK&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;NP-BG-PINK&#39;,1)">+</button></div><button class="abtn" id="ab-NP_BG_PINK" onclick="addC(&#39;NP-BG-PINK&#39;)">Agregar</button></div></div><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="./Portal Pedidos B2B — EPM final_files/ImagenesBlancoWEBNP_6.png" loading="lazy" data-k="NP_BG_WHITE"><div class="pswatch" id="sw-NP_BG_WHITE" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#f8f7f5"></div><div class="pswatch-l">NP-BG-WHITE</div></div></div><div class="pbody"><div class="pname">NAIL PRO Esmalte Permanente Builder Gel white 15ml (gel constructor en pote)</div><div class="psku">SKU: NP-BG-WHITE</div><div class="pps">PVP sugerido: $3.990</div><div class="ppm">$2.990 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;NP-BG-WHITE&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-NP_BG_WHITE" onchange="setQ(&#39;NP-BG-WHITE&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;NP-BG-WHITE&#39;,1)">+</button></div><button class="abtn" id="ab-NP_BG_WHITE" onclick="addC(&#39;NP-BG-WHITE&#39;)">Agregar</button></div></div><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="./Portal Pedidos B2B — EPM final_files/79_1.png" loading="lazy" data-k="EP_NP_CHERRYPINK"><div class="pswatch" id="sw-EP_NP_CHERRYPINK" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#f06292"></div><div class="pswatch-l">EP-NP-CHERRYPINK</div></div></div><div class="pbody"><div class="pname">NAIL PRO Esmalte Permanente Cherry Pink</div><div class="psku">SKU: EP-NP-CHERRYPINK</div><div class="pps">PVP sugerido: $4.490</div><div class="ppm">$2.980 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;EP-NP-CHERRYPINK&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-EP_NP_CHERRYPINK" onchange="setQ(&#39;EP-NP-CHERRYPINK&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;EP-NP-CHERRYPINK&#39;,1)">+</button></div><button class="abtn" id="ab-EP_NP_CHERRYPINK" onclick="addC(&#39;EP-NP-CHERRYPINK&#39;)">Agregar</button></div></div><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="./Portal Pedidos B2B — EPM final_files/nail-pro-esmalte-permanente-fre-c18_85.png" loading="lazy" data-k="EP_NP_FREC18"><div class="pswatch" id="sw-EP_NP_FREC18" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#b0b0b0"></div><div class="pswatch-l">EP-NP-FREC18</div></div></div><div class="pbody"><div class="pname">NAIL PRO Esmalte Permanente Fre 18</div><div class="psku">SKU: EP-NP-FREC18</div><div class="pps">PVP sugerido: $4.490</div><div class="ppm">$2.980 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;EP-NP-FREC18&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-EP_NP_FREC18" onchange="setQ(&#39;EP-NP-FREC18&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;EP-NP-FREC18&#39;,1)">+</button></div><button class="abtn" id="ab-EP_NP_FREC18" onclick="addC(&#39;EP-NP-FREC18&#39;)">Agregar</button></div></div><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="./Portal Pedidos B2B — EPM final_files/nail-pro-esmalte-permanente-fre-c31_87.png" loading="lazy" data-k="EP_NP_FREC31"><div class="pswatch" id="sw-EP_NP_FREC31" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#b0b0b0"></div><div class="pswatch-l">EP-NP-FREC31</div></div></div><div class="pbody"><div class="pname">NAIL PRO Esmalte Permanente Fre C3</div><div class="psku">SKU: EP-NP-FREC31</div><div class="pps">PVP sugerido: $4.490</div><div class="ppm">$2.980 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;EP-NP-FREC31&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-EP_NP_FREC31" onchange="setQ(&#39;EP-NP-FREC31&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;EP-NP-FREC31&#39;,1)">+</button></div><button class="abtn" id="ab-EP_NP_FREC31" onclick="addC(&#39;EP-NP-FREC31&#39;)">Agregar</button></div></div><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="./Portal Pedidos B2B — EPM final_files/77_1.png" loading="lazy" data-k="EP_NP_FRENCHPINK"><div class="pswatch" id="sw-EP_NP_FRENCHPINK" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#f06292"></div><div class="pswatch-l">EP-NP-FRENCHPINK</div></div></div><div class="pbody"><div class="pname">NAIL PRO Esmalte Permanente Fre Pink</div><div class="psku">SKU: EP-NP-FRENCHPINK</div><div class="pps">PVP sugerido: $4.490</div><div class="ppm">$2.980 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;EP-NP-FRENCHPINK&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-EP_NP_FRENCHPINK" onchange="setQ(&#39;EP-NP-FRENCHPINK&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;EP-NP-FRENCHPINK&#39;,1)">+</button></div><button class="abtn" id="ab-EP_NP_FRENCHPINK" onclick="addC(&#39;EP-NP-FRENCHPINK&#39;)">Agregar</button></div></div><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="./Portal Pedidos B2B — EPM final_files/nail-pro-hard-gel-002-pink-traslucido-15ml_hg-np-002_5d229b24-fadd-49a7-9082-9145083e9c83.png" loading="lazy" data-k="HG_NP_002"><div class="pswatch" id="sw-HG_NP_002" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#b0b0b0"></div><div class="pswatch-l">HG-NP-002</div></div></div><div class="pbody"><div class="pname">NAIL PRO Esmalte Permanente Hard Gel 002 15ml (gel constructor en botella)</div><div class="psku">SKU: HG-NP-002</div><div class="pps">PVP sugerido: $4.990</div><div class="ppm">$3.650 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;HG-NP-002&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-HG_NP_002" onchange="setQ(&#39;HG-NP-002&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;HG-NP-002&#39;,1)">+</button></div><button class="abtn" id="ab-HG_NP_002" onclick="addC(&#39;HG-NP-002&#39;)">Agregar</button></div></div><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="./Portal Pedidos B2B — EPM final_files/nail-pro-hard-gel-clear-15ml_hg-np-clear.png" loading="lazy" data-k="HG_NP_CLEAR"><div class="pswatch" id="sw-HG_NP_CLEAR" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#b0b0b0"></div><div class="pswatch-l">HG-NP-CLEAR</div></div></div><div class="pbody"><div class="pname">NAIL PRO Esmalte Permanente Hard Gel Clear 15ml (gel constructor en botella)</div><div class="psku">SKU: HG-NP-CLEAR</div><div class="pps">PVP sugerido: $4.990</div><div class="ppm">$3.650 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;HG-NP-CLEAR&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-HG_NP_CLEAR" onchange="setQ(&#39;HG-NP-CLEAR&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;HG-NP-CLEAR&#39;,1)">+</button></div><button class="abtn" id="ab-HG_NP_CLEAR" onclick="addC(&#39;HG-NP-CLEAR&#39;)">Agregar</button></div></div><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="./Portal Pedidos B2B — EPM final_files/68.png" loading="lazy" data-k="EP_NP_JELLY01"><div class="pswatch" id="sw-EP_NP_JELLY01" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#c8d8f0"></div><div class="pswatch-l">EP-NP-JELLY01</div></div></div><div class="pbody"><div class="pname">NAIL PRO Esmalte Permanente Jelly 01</div><div class="psku">SKU: EP-NP-JELLY01</div><div class="pps">PVP sugerido: $4.490</div><div class="ppm">$2.980 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;EP-NP-JELLY01&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-EP_NP_JELLY01" onchange="setQ(&#39;EP-NP-JELLY01&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;EP-NP-JELLY01&#39;,1)">+</button></div><button class="abtn" id="ab-EP_NP_JELLY01" onclick="addC(&#39;EP-NP-JELLY01&#39;)">Agregar</button></div></div><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="./Portal Pedidos B2B — EPM final_files/70.png" loading="lazy" data-k="EP_NP_JELLY03"><div class="pswatch" id="sw-EP_NP_JELLY03" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#c8d8f0"></div><div class="pswatch-l">EP-NP-JELLY03</div></div></div><div class="pbody"><div class="pname">NAIL PRO Esmalte Permanente Jelly 03</div><div class="psku">SKU: EP-NP-JELLY03</div><div class="pps">PVP sugerido: $4.490</div><div class="ppm">$2.980 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;EP-NP-JELLY03&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-EP_NP_JELLY03" onchange="setQ(&#39;EP-NP-JELLY03&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;EP-NP-JELLY03&#39;,1)">+</button></div><button class="abtn" id="ab-EP_NP_JELLY03" onclick="addC(&#39;EP-NP-JELLY03&#39;)">Agregar</button></div></div><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="./Portal Pedidos B2B — EPM final_files/72.png" loading="lazy" data-k="EP_NP_JELLY05"><div class="pswatch" id="sw-EP_NP_JELLY05" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#c8d8f0"></div><div class="pswatch-l">EP-NP-JELLY05</div></div></div><div class="pbody"><div class="pname">NAIL PRO Esmalte Permanente Jelly 05</div><div class="psku">SKU: EP-NP-JELLY05</div><div class="pps">PVP sugerido: $4.490</div><div class="ppm">$2.980 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;EP-NP-JELLY05&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-EP_NP_JELLY05" onchange="setQ(&#39;EP-NP-JELLY05&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;EP-NP-JELLY05&#39;,1)">+</button></div><button class="abtn" id="ab-EP_NP_JELLY05" onclick="addC(&#39;EP-NP-JELLY05&#39;)">Agregar</button></div></div><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="./Portal Pedidos B2B — EPM final_files/74_1.png" loading="lazy" data-k="EP_NP_JELLY13"><div class="pswatch" id="sw-EP_NP_JELLY13" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#c8d8f0"></div><div class="pswatch-l">EP-NP-JELLY13</div></div></div><div class="pbody"><div class="pname">NAIL PRO Esmalte Permanente Jelly 13</div><div class="psku">SKU: EP-NP-JELLY13</div><div class="pps">PVP sugerido: $4.490</div><div class="ppm">$2.980 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;EP-NP-JELLY13&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-EP_NP_JELLY13" onchange="setQ(&#39;EP-NP-JELLY13&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;EP-NP-JELLY13&#39;,1)">+</button></div><button class="abtn" id="ab-EP_NP_JELLY13" onclick="addC(&#39;EP-NP-JELLY13&#39;)">Agregar</button></div></div><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="./Portal Pedidos B2B — EPM final_files/nail-pro-acrilico-color-01-negro_nail-pro-acrilico-color-01-negro_nail-pro-acrilico-color-01-negro_color01.png" loading="lazy" data-k="NP_COLOR_01"><div class="pswatch" id="sw-NP_COLOR_01" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#1c1c1c"></div><div class="pswatch-l">NP-COLOR-01</div></div></div><div class="pbody"><div class="pname">NAIL PRO ACRILICO COLOR #01 NEGRO</div><div class="psku">SKU: NP-COLOR-01</div><div class="pps">PVP sugerido: $3.990</div><div class="ppm">$2.990 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;NP-COLOR-01&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-NP_COLOR_01" onchange="setQ(&#39;NP-COLOR-01&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;NP-COLOR-01&#39;,1)">+</button></div><button class="abtn" id="ab-NP_COLOR_01" onclick="addC(&#39;NP-COLOR-01&#39;)">Agregar</button></div></div><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="./Portal Pedidos B2B — EPM final_files/nail-pro-acrilico-color-04-azul_nail-pro-acrilico-color-04-azul_nail-pro-acrilico-color-04-azul_color04.png" loading="lazy" data-k="NP_COLOR_04"><div class="pswatch" id="sw-NP_COLOR_04" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#1565c0"></div><div class="pswatch-l">NP-COLOR-04</div></div></div><div class="pbody"><div class="pname">NAIL PRO ACRILICO COLOR #04 AZUL</div><div class="psku">SKU: NP-COLOR-04</div><div class="pps">PVP sugerido: $3.990</div><div class="ppm">$2.990 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;NP-COLOR-04&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-NP_COLOR_04" onchange="setQ(&#39;NP-COLOR-04&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;NP-COLOR-04&#39;,1)">+</button></div><button class="abtn" id="ab-NP_COLOR_04" onclick="addC(&#39;NP-COLOR-04&#39;)">Agregar</button></div></div><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="./Portal Pedidos B2B — EPM final_files/nail-pro-acrilico-color-05-rojo-sandia_nail-pro-acrilico-color-05-rojo-sandia_nail-pro-acrilico-color-05-rojo-sandia_color05.png" loading="lazy" data-k="NP_COLOR_05"><div class="pswatch" id="sw-NP_COLOR_05" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#c62828"></div><div class="pswatch-l">NP-COLOR-05</div></div></div><div class="pbody"><div class="pname">NAIL PRO ACRILICO COLOR #05 ROJO SANDIA</div><div class="psku">SKU: NP-COLOR-05</div><div class="pps">PVP sugerido: $3.990</div><div class="ppm">$2.990 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;NP-COLOR-05&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-NP_COLOR_05" onchange="setQ(&#39;NP-COLOR-05&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;NP-COLOR-05&#39;,1)">+</button></div><button class="abtn" id="ab-NP_COLOR_05" onclick="addC(&#39;NP-COLOR-05&#39;)">Agregar</button></div></div><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="./Portal Pedidos B2B — EPM final_files/nail-pro-acrilico-color-06-turquesa_nail-pro-acrilico-color-06-turquesa_nail-pro-acrilico-color-06-turquesa_color06.png" loading="lazy" data-k="NP_COLOR_06"><div class="pswatch" id="sw-NP_COLOR_06" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#b0b0b0"></div><div class="pswatch-l">NP-COLOR-06</div></div></div><div class="pbody"><div class="pname">NAIL PRO ACRILICO COLOR #06 TURQUESA</div><div class="psku">SKU: NP-COLOR-06</div><div class="pps">PVP sugerido: $3.990</div><div class="ppm">$2.990 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;NP-COLOR-06&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-NP_COLOR_06" onchange="setQ(&#39;NP-COLOR-06&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;NP-COLOR-06&#39;,1)">+</button></div><button class="abtn" id="ab-NP_COLOR_06" onclick="addC(&#39;NP-COLOR-06&#39;)">Agregar</button></div></div><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="./Portal Pedidos B2B — EPM final_files/nail-pro-acrilico-color-07-celeste-pastel_nail-pro-acrilico-color-07-celeste-pastel_nail-pro-acrilico-color-07-celeste-pastel_color07.png" loading="lazy" data-k="NP_COLOR_07"><div class="pswatch" id="sw-NP_COLOR_07" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#4fc3f7"></div><div class="pswatch-l">NP-COLOR-07</div></div></div><div class="pbody"><div class="pname">NAIL PRO ACRILICO COLOR #07 CELESTE PASTEL</div><div class="psku">SKU: NP-COLOR-07</div><div class="pps">PVP sugerido: $3.990</div><div class="ppm">$2.990 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;NP-COLOR-07&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-NP_COLOR_07" onchange="setQ(&#39;NP-COLOR-07&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;NP-COLOR-07&#39;,1)">+</button></div><button class="abtn" id="ab-NP_COLOR_07" onclick="addC(&#39;NP-COLOR-07&#39;)">Agregar</button></div></div><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="./Portal Pedidos B2B — EPM final_files/nail-pro-acrilico-color-09-damasco-pastel_nail-pro-acrilico-color-09-damasco-pastel_nailproacrilicodamasco-pastel_color09.png" loading="lazy" data-k="NP_COLOR_09"><div class="pswatch" id="sw-NP_COLOR_09" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#c8956c"></div><div class="pswatch-l">NP-COLOR-09</div></div></div><div class="pbody"><div class="pname">NAIL PRO ACRILICO COLOR #09 DAMASCO PASTEL</div><div class="psku">SKU: NP-COLOR-09</div><div class="pps">PVP sugerido: $3.990</div><div class="ppm">$2.990 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;NP-COLOR-09&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-NP_COLOR_09" onchange="setQ(&#39;NP-COLOR-09&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;NP-COLOR-09&#39;,1)">+</button></div><button class="abtn" id="ab-NP_COLOR_09" onclick="addC(&#39;NP-COLOR-09&#39;)">Agregar</button></div></div><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="./Portal Pedidos B2B — EPM final_files/nail-pro-acrilico-color-13-lila-pastel_5990.png" loading="lazy" data-k="NP_COLOR_13"><div class="pswatch" id="sw-NP_COLOR_13" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#ab47bc"></div><div class="pswatch-l">NP-COLOR-13</div></div></div><div class="pbody"><div class="pname">NAIL PRO ACRILICO COLOR #13 LILA PASTEL</div><div class="psku">SKU: NP-COLOR-13</div><div class="pps">PVP sugerido: $3.990</div><div class="ppm">$2.990 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;NP-COLOR-13&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-NP_COLOR_13" onchange="setQ(&#39;NP-COLOR-13&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;NP-COLOR-13&#39;,1)">+</button></div><button class="abtn" id="ab-NP_COLOR_13" onclick="addC(&#39;NP-COLOR-13&#39;)">Agregar</button></div></div><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="./Portal Pedidos B2B — EPM final_files/nail-pro-acrilico-color-14-orquidea-pastel_nail-pro-acrilico-color-14-orquidea-pastel_nail-pro-acrilico-color-14-orquidea-pastel_color14_2.png" loading="lazy" data-k="NP_COLOR_14"><div class="pswatch" id="sw-NP_COLOR_14" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#b0b0b0"></div><div class="pswatch-l">NP-COLOR-14</div></div></div><div class="pbody"><div class="pname">NAIL PRO ACRILICO COLOR #14 ORQUIDEA PASTEL</div><div class="psku">SKU: NP-COLOR-14</div><div class="pps">PVP sugerido: $3.990</div><div class="ppm">$2.990 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;NP-COLOR-14&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-NP_COLOR_14" onchange="setQ(&#39;NP-COLOR-14&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;NP-COLOR-14&#39;,1)">+</button></div><button class="abtn" id="ab-NP_COLOR_14" onclick="addC(&#39;NP-COLOR-14&#39;)">Agregar</button></div></div><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="./Portal Pedidos B2B — EPM final_files/nail-pro-acrilico-color-16-naranjo-fluor_nail-pro-acrilico-color-15-rojo-burdeo_nail-pro-acrilico-color-15-rojo-burdeo_color15.png" loading="lazy" data-k="NP_COLOR_15"><div class="pswatch" id="sw-NP_COLOR_15" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#c62828"></div><div class="pswatch-l">NP-COLOR-15</div></div></div><div class="pbody"><div class="pname">NAIL PRO ACRILICO COLOR #15 ROJO BURDEO</div><div class="psku">SKU: NP-COLOR-15</div><div class="pps">PVP sugerido: $3.990</div><div class="ppm">$2.990 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;NP-COLOR-15&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-NP_COLOR_15" onchange="setQ(&#39;NP-COLOR-15&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;NP-COLOR-15&#39;,1)">+</button></div><button class="abtn" id="ab-NP_COLOR_15" onclick="addC(&#39;NP-COLOR-15&#39;)">Agregar</button></div></div><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="./Portal Pedidos B2B — EPM final_files/nail-pro-acrilico-color-16-naranjo-fluor_nail-pro-acrilico-color-16-naranjo-fluor_nail-pro-acrilico-color-16-naranjo-fluor_color16.png" loading="lazy" data-k="NP_COLOR_16"><div class="pswatch" id="sw-NP_COLOR_16" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#b0b0b0"></div><div class="pswatch-l">NP-COLOR-16</div></div></div><div class="pbody"><div class="pname">NAIL PRO ACRILICO COLOR #16 NARANJO FLUOR</div><div class="psku">SKU: NP-COLOR-16</div><div class="pps">PVP sugerido: $3.990</div><div class="ppm">$2.990 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;NP-COLOR-16&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-NP_COLOR_16" onchange="setQ(&#39;NP-COLOR-16&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;NP-COLOR-16&#39;,1)">+</button></div><button class="abtn" id="ab-NP_COLOR_16" onclick="addC(&#39;NP-COLOR-16&#39;)">Agregar</button></div></div><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="./Portal Pedidos B2B — EPM final_files/nail-pro-acrilico-color-17-rosado-fluor_nail-pro-acrilico-color-17-rosado-fluor_nail-pro-acrilico-color-17-rosado-fluor_color17of.png" loading="lazy" data-k="NP_COLOR_17"><div class="pswatch" id="sw-NP_COLOR_17" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#f48fb1"></div><div class="pswatch-l">NP-COLOR-17</div></div></div><div class="pbody"><div class="pname">NAIL PRO ACRILICO COLOR #17 ROSADO FLUOR</div><div class="psku">SKU: NP-COLOR-17</div><div class="pps">PVP sugerido: $3.990</div><div class="ppm">$2.990 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;NP-COLOR-17&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-NP_COLOR_17" onchange="setQ(&#39;NP-COLOR-17&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;NP-COLOR-17&#39;,1)">+</button></div><button class="abtn" id="ab-NP_COLOR_17" onclick="addC(&#39;NP-COLOR-17&#39;)">Agregar</button></div></div><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="./Portal Pedidos B2B — EPM final_files/nail-pro-acrilico-color-17-rosado-fluor_nail-pro-acrilico-color-17-rosado-fluor_nail-pro-acrilico-color-17-rosado-fluor_color17of.png" loading="lazy" data-k="NP_COLOR_18"><div class="pswatch" id="sw-NP_COLOR_18" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#e91e8c"></div><div class="pswatch-l">NP-COLOR-18</div></div></div><div class="pbody"><div class="pname">NAIL PRO ACRILICO COLOR #18 FUCSIA</div><div class="psku">SKU: NP-COLOR-18</div><div class="pps">PVP sugerido: $3.990</div><div class="ppm">$2.990 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;NP-COLOR-18&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-NP_COLOR_18" onchange="setQ(&#39;NP-COLOR-18&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;NP-COLOR-18&#39;,1)">+</button></div><button class="abtn" id="ab-NP_COLOR_18" onclick="addC(&#39;NP-COLOR-18&#39;)">Agregar</button></div></div><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="./Portal Pedidos B2B — EPM final_files/campo-de-trabajo-nail-pro-rosa_seducete73_1.jpg" loading="lazy" data-k="NP_CAMPO125Rosa"><div class="pswatch" id="sw-NP_CAMPO125Rosa" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#f06292"></div><div class="pswatch-l">NP-CAMPO125Rosa</div></div></div><div class="pbody"><div class="pname">NAIL PRO Campo de Trabajo Rosa</div><div class="psku">SKU: NP-CAMPO125Rosa</div><div class="pps">PVP sugerido: $7.490</div><div class="ppm">$5.490 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;NP-CAMPO125Rosa&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-NP_CAMPO125Rosa" onchange="setQ(&#39;NP-CAMPO125Rosa&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;NP-CAMPO125Rosa&#39;,1)">+</button></div><button class="abtn" id="ab-NP_CAMPO125Rosa" onclick="addC(&#39;NP-CAMPO125Rosa&#39;)">Agregar</button></div></div><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="./Portal Pedidos B2B — EPM final_files/delantal-rosado-nail-pro_imagendewhatsapp2024-06-26alas18.31.00_2c4916bc_1.jpg" loading="lazy" data-k="NP_DELANTALPINK"><div class="pswatch" id="sw-NP_DELANTALPINK" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#f48fb1"></div><div class="pswatch-l">NP-DELANTALPINK</div></div></div><div class="pbody"><div class="pname">NAIL PRO Delantal Rosado</div><div class="psku">SKU: NP-DELANTALPINK</div><div class="pps">PVP sugerido: $5.990</div><div class="ppm">$3.990 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;NP-DELANTALPINK&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-NP_DELANTALPINK" onchange="setQ(&#39;NP-DELANTALPINK&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;NP-DELANTALPINK&#39;,1)">+</button></div><button class="abtn" id="ab-NP_DELANTALPINK" onclick="addC(&#39;NP-DELANTALPINK&#39;)">Agregar</button></div></div><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="./Portal Pedidos B2B — EPM final_files/nail-pro-deshidratador-110ml_2_1.png" loading="lazy" data-k="NP_DESHID110ML"><div class="pswatch" id="sw-NP_DESHID110ML" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#b0b0b0"></div><div class="pswatch-l">NP-DESHID110ML</div></div></div><div class="pbody"><div class="pname">NAIL PRO Deshidratador Nail Pro 110ml</div><div class="psku">SKU: NP-DESHID110ML</div><div class="pps">PVP sugerido: $3.490</div><div class="ppm">$2.590 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;NP-DESHID110ML&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-NP_DESHID110ML" onchange="setQ(&#39;NP-DESHID110ML&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;NP-DESHID110ML&#39;,1)">+</button></div><button class="abtn" id="ab-NP_DESHID110ML" onclick="addC(&#39;NP-DESHID110ML&#39;)">Agregar</button></div></div><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="./Portal Pedidos B2B — EPM final_files/ImagenesBlancoWEBNP_36_e5f661b5-e816-4d5d-a45f-1782cb842670.png" loading="lazy" data-k="NP_DESHID1LT"><div class="pswatch" id="sw-NP_DESHID1LT" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#b0b0b0"></div><div class="pswatch-l">NP-DESHID1LT</div></div></div><div class="pbody"><div class="pname">NAIL PRO Deshidratador Nail Pro 1L</div><div class="psku">SKU: NP-DESHID1LT</div><div class="pps">PVP sugerido: $13.990</div><div class="ppm">$9.035 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;NP-DESHID1LT&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-NP_DESHID1LT" onchange="setQ(&#39;NP-DESHID1LT&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;NP-DESHID1LT&#39;,1)">+</button></div><button class="abtn" id="ab-NP_DESHID1LT" onclick="addC(&#39;NP-DESHID1LT&#39;)">Agregar</button></div></div><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="./Portal Pedidos B2B — EPM final_files/nail-pro-deshidratador-250ml_1_1.png" loading="lazy" data-k="NP_DESHID250ML"><div class="pswatch" id="sw-NP_DESHID250ML" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#b0b0b0"></div><div class="pswatch-l">NP-DESHID250ML</div></div></div><div class="pbody"><div class="pname">NAIL PRO Deshidratador Nail Pro 250ml</div><div class="psku">SKU: NP-DESHID250ML</div><div class="pps">PVP sugerido: $5.990</div><div class="ppm">$3.990 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;NP-DESHID250ML&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-NP_DESHID250ML" onchange="setQ(&#39;NP-DESHID250ML&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;NP-DESHID250ML&#39;,1)">+</button></div><button class="abtn" id="ab-NP_DESHID250ML" onclick="addC(&#39;NP-DESHID250ML&#39;)">Agregar</button></div></div><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="./Portal Pedidos B2B — EPM final_files/nail-pro-paleta-polvo-aurora_img_5412-2_1.jpg" loading="lazy" data-k="NP_PALETA_AURORA"><div class="pswatch" id="sw-NP_PALETA_AURORA" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#b0b0b0"></div><div class="pswatch-l">NP-PALETA-AURORA</div></div></div><div class="pbody"><div class="pname">NAIL PRO EFECTO PALETA X6 AURORA</div><div class="psku">SKU: NP-PALETA-AURORA</div><div class="pps">PVP sugerido: $5.990</div><div class="ppm">$3.990 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;NP-PALETA-AURORA&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-NP_PALETA_AURORA" onchange="setQ(&#39;NP-PALETA-AURORA&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;NP-PALETA-AURORA&#39;,1)">+</button></div><button class="abtn" id="ab-NP_PALETA_AURORA" onclick="addC(&#39;NP-PALETA-AURORA&#39;)">Agregar</button></div></div><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="./Portal Pedidos B2B — EPM final_files/nail-pro-paleta-polvo-cromado_img_5413-2_1.jpg" loading="lazy" data-k="NP_PALETA_CROMADO"><div class="pswatch" id="sw-NP_PALETA_CROMADO" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#b0b0b0"></div><div class="pswatch-l">NP-PALETA-CROMADO</div></div></div><div class="pbody"><div class="pname">NAIL PRO EFECTO PALETA X6 CROMADO</div><div class="psku">SKU: NP-PALETA-CROMADO</div><div class="pps">PVP sugerido: $5.990</div><div class="ppm">$3.990 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;NP-PALETA-CROMADO&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-NP_PALETA_CROMADO" onchange="setQ(&#39;NP-PALETA-CROMADO&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;NP-PALETA-CROMADO&#39;,1)">+</button></div><button class="abtn" id="ab-NP_PALETA_CROMADO" onclick="addC(&#39;NP-PALETA-CROMADO&#39;)">Agregar</button></div></div><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="./Portal Pedidos B2B — EPM final_files/nail-pro-permanente-top-coat-sin-capa-15ml_ep-np-topnw.png" loading="lazy" data-k="EP_NP_TOPNW"><div class="pswatch" id="sw-EP_NP_TOPNW" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#b0b0b0"></div><div class="pswatch-l">EP-NP-TOPNW</div></div></div><div class="pbody"><div class="pname">NAIL PRO Esmalte Permanente - Top Coat sin capa (15ml)</div><div class="psku">SKU: EP-NP-TOPNW</div><div class="pps">PVP sugerido: $4.990</div><div class="ppm">$3.310 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;EP-NP-TOPNW&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-EP_NP_TOPNW" onchange="setQ(&#39;EP-NP-TOPNW&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;EP-NP-TOPNW&#39;,1)">+</button></div><button class="abtn" id="ab-EP_NP_TOPNW" onclick="addC(&#39;EP-NP-TOPNW&#39;)">Agregar</button></div></div><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="./Portal Pedidos B2B — EPM final_files/nail-pro-hard-gel-002-pink-traslucido-15ml_hg-np-002_5d229b24-fadd-49a7-9082-9145083e9c83.png" loading="lazy" data-k="EP_NP_TOPMATTE"><div class="pswatch" id="sw-EP_NP_TOPMATTE" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#b0b0b0"></div><div class="pswatch-l">EP-NP-TOPMATTE</div></div></div><div class="pbody"><div class="pname">NAIL PRO Esmalte Permanente - Top Matte 15ml</div><div class="psku">SKU: EP-NP-TOPMATTE</div><div class="pps">PVP sugerido: $4.990</div><div class="ppm">$3.310 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;EP-NP-TOPMATTE&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-EP_NP_TOPMATTE" onchange="setQ(&#39;EP-NP-TOPMATTE&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;EP-NP-TOPMATTE&#39;,1)">+</button></div><button class="abtn" id="ab-EP_NP_TOPMATTE" onclick="addC(&#39;EP-NP-TOPMATTE&#39;)">Agregar</button></div></div><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="./Portal Pedidos B2B — EPM final_files/42.png" loading="lazy" data-k="EP_NP_FLA001"><div class="pswatch" id="sw-EP_NP_FLA001" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#ab47bc"></div><div class="pswatch-l">EP-NP-FLA001</div></div></div><div class="pbody"><div class="pname">NAIL PRO Esmalte Permanente FLASH 001 REFLECTANTE Lila</div><div class="psku">SKU: EP-NP-FLA001</div><div class="pps">PVP sugerido: $4.990</div><div class="ppm">$3.650 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;EP-NP-FLA001&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-EP_NP_FLA001" onchange="setQ(&#39;EP-NP-FLA001&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;EP-NP-FLA001&#39;,1)">+</button></div><button class="abtn" id="ab-EP_NP_FLA001" onclick="addC(&#39;EP-NP-FLA001&#39;)">Agregar</button></div></div><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="./Portal Pedidos B2B — EPM final_files/Imagenes_Blanco_WEB_NP_4.png" loading="lazy" data-k="EP_NP_FLA002"><div class="pswatch" id="sw-EP_NP_FLA002" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#f48fb1"></div><div class="pswatch-l">EP-NP-FLA002</div></div></div><div class="pbody"><div class="pname">NAIL PRO Esmalte Permanente FLASH 002 REFLECTANTE Rosado</div><div class="psku">SKU: EP-NP-FLA002</div><div class="pps">PVP sugerido: $4.990</div><div class="ppm">$3.650 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;EP-NP-FLA002&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-EP_NP_FLA002" onchange="setQ(&#39;EP-NP-FLA002&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;EP-NP-FLA002&#39;,1)">+</button></div><button class="abtn" id="ab-EP_NP_FLA002" onclick="addC(&#39;EP-NP-FLA002&#39;)">Agregar</button></div></div><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="./Portal Pedidos B2B — EPM final_files/Imagenes_Blanco_WEB_NP_5.png" loading="lazy" data-k="EP_NP_FLA003"><div class="pswatch" id="sw-EP_NP_FLA003" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#c79a00"></div><div class="pswatch-l">EP-NP-FLA003</div></div></div><div class="pbody"><div class="pname">NAIL PRO Esmalte Permanente FLASH 003 REFLECTANTE Dorado</div><div class="psku">SKU: EP-NP-FLA003</div><div class="pps">PVP sugerido: $4.990</div><div class="ppm">$3.650 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;EP-NP-FLA003&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-EP_NP_FLA003" onchange="setQ(&#39;EP-NP-FLA003&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;EP-NP-FLA003&#39;,1)">+</button></div><button class="abtn" id="ab-EP_NP_FLA003" onclick="addC(&#39;EP-NP-FLA003&#39;)">Agregar</button></div></div><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="./Portal Pedidos B2B — EPM final_files/Imagenes_Blanco_WEB_NP_13_152bde63-f7b5-4d7e-9147-f7d103e42b43.png" loading="lazy" data-k="EP_NP_FLA004"><div class="pswatch" id="sw-EP_NP_FLA004" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#2e7d32"></div><div class="pswatch-l">EP-NP-FLA004</div></div></div><div class="pbody"><div class="pname">NAIL PRO Esmalte Permanente FLASH 004 REFLECTANTE Verde</div><div class="psku">SKU: EP-NP-FLA004</div><div class="pps">PVP sugerido: $4.990</div><div class="ppm">$3.650 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;EP-NP-FLA004&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-EP_NP_FLA004" onchange="setQ(&#39;EP-NP-FLA004&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;EP-NP-FLA004&#39;,1)">+</button></div><button class="abtn" id="ab-EP_NP_FLA004" onclick="addC(&#39;EP-NP-FLA004&#39;)">Agregar</button></div></div><div class="pcard" style=""><div class="pimg-wrap" style="background:#fce4f1"><img class="pimg-real" src="./Portal Pedidos B2B — EPM final_files/Imagenes_Blanco_WEB_NP_7.png" loading="lazy" data-k="EP_NP_FLA005"><div class="pswatch" id="sw-EP_NP_FLA005" style="display:none;background:#fce4f1"><div class="pswatch-c" style="background:#1c1c1c"></div><div class="pswatch-l">EP-NP-FLA005</div></div></div><div class="pbody"><div class="pname">NAIL PRO Esmalte Permanente FLASH 005 REFLECTANTE Negro</div><div class="psku">SKU: EP-NP-FLA005</div><div class="pps">PVP sugerido: $4.990</div><div class="ppm">$3.650 <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div><div class="qrow"><button class="qbtn" onclick="chgQ(&#39;EP-NP-FLA005&#39;,-1)">−</button><input class="qinp" type="number" min="0" value="0" id="qi-EP_NP_FLA005" onchange="setQ(&#39;EP-NP-FLA005&#39;,this.value)"><button class="qbtn" onclick="chgQ(&#39;EP-NP-FLA005&#39;,1)">+</button></div><button class="abtn" id="ab-EP_NP_FLA005" onclick="addC(&#39;EP-NP-FLA005&#39;)">Agregar</button></div></div></div>
+    <div class="pag" id="pag"><span class="pginfo">1-48 de 723</span><button class="pbtn2" onclick="goPg(0)" disabled="">‹</button><button class="pbtn2 active" onclick="goPg(1)">1</button><button class="pbtn2" onclick="goPg(2)">2</button><button class="pbtn2" onclick="goPg(3)">3</button><span style="padding:0 4px">…</span><button class="pbtn2" onclick="goPg(16)">16</button><button class="pbtn2" onclick="goPg(2)">›</button></div>
+    <div style="display:flex;justify-content:space-between;margin-top:1.25rem">
+      <button class="btn2" onclick="goStep(0)">← Volver</button>
+      <button class="btn" onclick="goStep(2)">Revisar pedido (<span id="cartCnt2">0</span> items) →</button>
+    </div>
+  </div>
+
+  <!-- P2: DATOS COMPLETOS + REVISAR -->
+  <div class="panel" id="p2">
+    <!-- Full client form shown here -->
+    <div id="fullFormSection">
+      <div class="fcard">
+        <h2>🧾 Tipo de documento</h2>
+        <div class="radio-group">
+          <label class="radio-opt" id="opt_boleta" onclick="setTipo(&#39;boleta&#39;)">
+            <input type="radio" name="tipo"> Boleta
+          </label>
+          <label class="radio-opt selected" id="opt_factura" onclick="setTipo(&#39;factura&#39;)">
+            <input type="radio" name="tipo" checked=""> Factura
+          </label>
+        </div>
+      </div>
+      <!-- BOLETA -->
+      <div id="secBoleta" style="display:none">
+        <div class="fcard">
+          <h2>👤 Datos de despacho</h2>
+          <div class="fgrid">
+            <div class="fg"><label>RUT *</label><input id="b_rut" placeholder="12.345.678-9" oninput="liveVal(this,'rut')"><span class="fhint">Ej: 12.345.678-9</span><span class="ferr">RUT inválido (ej: 12.345.678-9)</span></div>
+            <div class="fg"><label>Teléfono *</label><input id="b_tel" placeholder="+56 9 1234 5678" oninput="liveVal(this,&#39;phone&#39;)"><span class="fhint">Ej: +56 9 1234 5678</span><span class="ferr">Ej: +56 9 1234 5678</span></div>
+            <div class="fg"><label>Calle y número *</label><input id="b_calle" placeholder="Av. Providencia 1234, Providencia" oninput="liveVal(this,&#39;addr&#39;)"> <button type="button" onclick="verifyAddr('b_calle','b_comuna','b_ciudad')" class="map-btn" title="Verificar dirección en mapa">&#128205; Ver en mapa</button><span class="fhint">Ej: Av. Providencia 1234, Providencia</span><span class="ferr">Ingresa calle y número</span></div>
+            <div class="fg"><label>Depto / Oficina</label><input id="b_depto" placeholder="Depto 501 (opcional)"></div>
+            <div class="fg"><label>Comuna</label><input id="b_comuna" placeholder="Ñuñoa, Peñalolén..."></div>
+            <div class="fg"><label>Ciudad / Región</label><input id="b_ciudad" placeholder="Santiago, Región Metropolitana"></div>
+          </div>
+        </div>
+      </div>
+      <!-- FACTURA -->
+      <div id="secFactura">
+        <div class="fcard">
+          <h2>🏢 Datos de facturación</h2>
+          <div class="fgrid">
+            <div class="fg"><label>Razón social *</label><input id="f_razon" placeholder="Empresa S.A." oninput="liveVal(this,&#39;free&#39;)"><span class="fhint">Ej: Distribuidora Sur S.A.</span><span class="ferr">Campo requerido</span></div>
+            <div class="fg"><label>RUT empresa *</label><input id="f_rut" placeholder="76.543.210-K" oninput="liveVal(this,&#39;rut&#39;)"><span class="fhint">Formato: 76.543.210-K</span><span class="ferr">Formato inválido</span></div>
+            <div class="fg full"><label>Giro *</label><input id="f_giro" placeholder="Venta al por menor de cosméticos" oninput="liveVal(this,&#39;free&#39;)"><span class="fhint">Ej: Venta al por menor de cosméticos</span><span class="ferr">Campo requerido</span></div>
+            <div class="fg full"><label>Dirección de facturación *</label><input id="f_dir_fact" placeholder="Av. Apoquindo 4500, Las Condes" oninput="liveVal(this,&#39;addr&#39;)"> <button type="button" onclick="verifyAddr('f_dir_fact',null,null)" class="map-btn" title="Verificar dirección en mapa">&#128205; Ver en mapa</button><span class="fhint">Ej: Av. Apoquindo 4500, Las Condes</span><span class="ferr">Ingresa dirección con número</span></div>
+            <div class="fg"><label>Teléfono *</label><input id="f_tel" placeholder="+56 9 1234 5678" oninput="liveVal(this,&#39;phone&#39;)"><span class="fhint">Ej: +56 9 1234 5678</span><span class="ferr">Ej: +56 9 1234 5678</span></div>
+            <div class="fg full">
+              <label style="display:flex;align-items:center;gap:8px;text-transform:none;font-size:.82rem;font-weight:600;cursor:pointer">
+                <input type="checkbox" id="f_diff" onchange="toggleDirDesp()" style="width:16px;height:16px">
+                La dirección de despacho es diferente a la de facturación
+              </label>
+            </div>
+            <div class="fg full" id="secDirDesp" style="display:none">
+              <label>Dirección de despacho *</label>
+              <input id="f_dir_desp" placeholder="Calle, número, depto/oficina, comuna"> <button type="button" onclick="verifyAddr('f_dir_desp',null,null)" class="map-btn" title="Verificar dirección en mapa">&#128205; Ver en mapa</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fcard">
+        <h2>💬 Notas adicionales</h2>
+        <textarea id="notas" placeholder="Instrucciones de entrega, horarios, observaciones..."></textarea>
+      </div>
+    </div>
+    <div style="margin-bottom:.85rem;display:flex;align-items:center;justify-content:space-between">
+      <button class="btn2" onclick="goStep(1)">← Seguir comprando</button>
+      <span style="font-size:.8rem;color:var(--mu)">Revisa tu pedido y completa tus datos</span>
+    </div>
+    <div class="clayout">
+      <div>
+        <div class="fcard" style="padding:0;overflow:hidden">
+          <div style="padding:1rem 1.25rem;border-bottom:1px solid var(--bo)">
+            <h2 style="margin:0;border:none;padding:0;font-size:.95rem">🛒 Productos en el pedido</h2>
+          </div>
+          <div id="cartTbl"></div>
+        </div>
+
+      </div>
+      <div class="osum">
+        <h3>Resumen del pedido</h3>
+        <div class="cosump" id="cSump"></div>
+        <div id="bSummary"></div>
+        <div id="sumRows"></div>
+        <div class="stot"><span>Subtotal neto</span><span id="totAmt">$0</span></div>
+        <div class="stot" style="font-size:.78rem;color:var(--mu);font-weight:600;border:none;padding-top:2px"><span>IVA 19%</span><span id="totIva">$0</span></div>
+        <div id="totDesc"></div>
+        <div id="giftMsg"></div>
+        <div class="stot" style="font-size:1.05rem;margin-top:.5rem;padding-top:.65rem;border-top:2px solid var(--bo)"><span>Total con IVA</span><span id="totFin">$0</span></div>
+        <div id="alerts" style="margin-top:.75rem"></div>
+        <button class="btn" style="width:100%;margin-top:1rem;justify-content:center" id="previewBtn" onclick="openPreview()">👁 Revisar antes de enviar</button>
+        <p style="font-size:.7rem;color:var(--mu);text-align:center;margin-top:.5rem">Revisa el resumen antes de confirmar</p>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- P3: ÉXITO -->
+  <div class="panel" id="p3">
+    <div class="success-card">
+      <div class="sico">✅</div>
+      <h2>¡Pedido enviado con éxito!</h2>
+      <p>Código de referencia:</p>
+      <div class="ocode" id="ocode">B2B-000000</div>
+      <p style="background:#fff0f8;border:1px solid #f9a8d4;border-radius:8px;padding:.85rem 1rem;color:#be185d;font-size:.84rem;margin-top:.75rem;line-height:1.7">
+        💜 <strong>¡Gracias por tu pedido!</strong> Nuestro equipo revisará la disponibilidad de stock y muy pronto se pondrá en contacto contigo para confirmar tu pedido.<br><br>
+        Te enviaremos el documento final con los productos disponibles y el monto total a pagar para coordinar la entrega.<br><br>
+        También recibirás un resumen de esta cotización en tu correo.
+      </p>
+      <button class="btn" style="margin-top:1.5rem" onclick="resetAll()">Hacer otro pedido</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL PREVIEW -->
+<div class="modal-bg" id="modalBg" style="display:none" onclick="if(event.target===this)closePreview()">
+  <div class="modal">
+    <div class="modal-header">
+      <h3>📋 Resumen — Enviar cotización de pedido</h3>
+      <button class="modal-close" onclick="closePreview()">✕</button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+    <div style="padding:.85rem 1.5rem;background:#fff0f8;border-top:1px solid #f9a8d4">
+      <p style="font-size:.84rem;color:#be185d;text-align:center;line-height:1.7">
+        💜 <strong>¡Gracias por tu pedido!</strong> Nuestro equipo revisará la disponibilidad de stock y muy pronto se pondrá en contacto contigo para confirmar tu pedido.<br>
+        Te enviaremos el documento final con los productos disponibles y el monto total a pagar para coordinar la entrega.
+      </p>
+    </div>
+    <div style="padding:1rem 1.5rem;border-top:1px solid var(--bo);display:flex;gap:.75rem;justify-content:flex-end;flex-wrap:wrap;background:#faf9f7;border-radius:0 0 14px 14px">
+      <button class="btn-outline" onclick="window.print()">🖨 Imprimir</button>
+      <button class="btn2" onclick="closePreview()">← Editar</button>
+      <button class="btn" id="submitBtn" onclick="submitOrder()">✓ Enviar cotización de pedido</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const WEBHOOK_URL = "https://script.google.com/a/macros/nailoutlet.cl/s/AKfycbyBBomGgQ88IFYIw_wU69oN_jG6pShvnW3_oM1S1gsqKuxnqgVm-1YDKgs2-hRAiw9n/exec";
+
+const PRODUCTS_DATA = [{"sku":"501305","n":"Go Paw - Fragancia para Mascotas 250 ml - Cotton Candy","pm":6425,"ps":9990,"b":"Go Paw","c":"MASCOTAS","clr":"#b0b0b0","img":"https://cdn.shopify.com/s/files/1/0602/9312/0129/files/GO_Paw_Fragancias_Cotton_250.png?v=1785248346&width=400","stock":158,"unavail":false},{"sku":"501294","n":"Go Paw - Fragancia para Mascotas 250 ml - Limón Verbena","pm":6425,"ps":9990,"b":"Go Paw","c":"MASCOTAS","clr":"#b0b0b0","img":"https://cdn.shopify.com/s/files/1/0602/9312/0129/files/Go_Paw_Fragancias_Limon_250.png?v=1785248345&width=400","stock":39,"unavail":false},{"sku":"501307","n":"Go Paw - Fragancia para Mascotas 250 ml - Watermelon Gum","pm":6425,"ps":9990,"b":"Go Paw","c":"MASCOTAS","clr":"#b0b0b0","img":"https://cdn.shopify.com/s/files/1/0602/9312/0129/files/Go_Paw_Fragancias_Sandia_250.png?v=1785248345&width=400","stock":305,"unavail":false},{"sku":"501306","n":"Go Paw - Fragancia para Mascotas 250 ml - Wild Berries","pm":6425,"ps":9990,"b":"Go Paw","c":"MASCOTAS","clr":"#b0b0b0","img":"https://cdn.shopify.com/s/files/1/0602/9312/0129/files/Go_Paw_Fragancia_Wild_Berries_250.png?v=1785248344&width=400","stock":140,"unavail":false},{"sku":"501302","n":"Go Paw - Fragancia para Mascotas 50 ml - Cotton Candy","pm":3208,"ps":4990,"b":"Go Paw","c":"MASCOTAS","clr":"#b0b0b0","img":"https://cdn.shopify.com/s/files/1/0602/9312/0129/files/Go_Paw_Fragancias_Cotton_50.png?v=1785248345&width=400","stock":498,"unavail":false},{"sku":"501293","n":"Go Paw - Fragancia para Mascotas 50 ml - Limón Verbena","pm":3208,"ps":4990,"b":"Go Paw","c":"MASCOTAS","clr":"#b0b0b0","img":"https://cdn.shopify.com/s/files/1/0602/9312/0129/files/Go_Paw_Fragancias_Limon_50.png?v=1785248347&width=400","stock":15,"unavail":true},{"sku":"501304","n":"Go Paw - Fragancia para Mascotas 50 ml - Watermelon Gum","pm":3208,"ps":4990,"b":"Go Paw","c":"MASCOTAS","clr":"#b0b0b0","img":"https://cdn.shopify.com/s/files/1/0602/9312/0129/files/Go_Paw_Fragancias_Sandia_50.png?v=1785248347&width=400","stock":0,"unavail":true},{"sku":"501303","n":"Go Paw - Fragancia para Mascotas 50 ml - Wild Berries","pm":3208,"ps":4990,"b":"Go Paw","c":"MASCOTAS","clr":"#b0b0b0","img":"https://cdn.shopify.com/s/files/1/0602/9312/0129/files/Go_Paw_Fragancia_Wild_Berries_50.png?v=1785248347&width=400","stock":224,"unavail":false},{"sku":"501382","n":"Go Paw - Shampoo con enjuague para Mascotas 250 ml","pm":6425,"ps":9990,"b":"Go Paw","c":"MASCOTAS","clr":"#c8e8f8","img":"https://cdn.shopify.com/s/files/1/0921/2936/2233/files/Shampoo_Para_Mascotas_-_Cotton_Candy.png?v=1787155675","stock":366,"unavail":false},{"sku":"501381","n":"Go Paw - Shampoo sin enjuague para Mascotas 150 ml","pm":6884,"ps":10990,"b":"Go Paw","c":"MASCOTAS","clr":"#a8d4f0","img":"https://cdn.shopify.com/s/files/1/0921/2936/2233/files/Shampoo_Para_Mascotas_Sin_Enjuague_-_Cotton_Candy.png?v=1787155673","stock":48,"unavail":false},{"sku":"CEPILLOMASCOTASVAPOR","n":"Go Paw - Cepillo Humidificador para Mascotas Rosado","pm":6425,"ps":9990,"b":"Go Paw","c":"MASCOTAS","clr":"#fce4f0","img":"https://cdn.shopify.com/s/files/1/0602/9312/0129/files/nuevos_productos_46_1.png?v=1785795900&width=400","stock":334,"unavail":false}];
+const BRAND_ORDER = ["Go Paw"];
+const BRAND_CFG = {
+  'Nail Pro':    {color:'#e91e8c',bg:'#fce4f1',min:0,disc:[{at:360000,pct:5},{at:720000,pct:10}]},
+  'Go Nails':    {color:'#b01060',bg:'#fce4f1',min:80000,disc:[],fixed:true},
+  'Go Hair':     {color:'#b01060',bg:'#fce4f1',min:80000,disc:[],fixed:true},
+  'Go Paw':      {color:'#b01060',bg:'#fce4f1',min:80000,disc:[],fixed:true},
+  'Go Living':    {color:'#c8a96e',bg:'#fdf5e6',min:80000,disc:[],fixed:true},
+  'Bluesky':     {color:'#c8a415',bg:'#fdf8e1',min:100000,disc:[{at:800000,pct:5}],excludeFromNPDisc:true},
+  'Artistic':    {color:'#333',bg:'#f2f2f2',min:0,disc:[]},
+  'Avry Beauty': {color:'#555',bg:'#f2f2f2',min:0,disc:[{at:360000,pct:5},{at:720000,pct:10}]},
+  'Ambar':            {color:'#8b6914',bg:'#fdf5e6',min:80000,disc:[],fixed:true},
+  'The Fruit Company':{color:'#8b6914',bg:'#fdf5e6',min:80000,disc:[],fixed:true},
+  'Aroma Home':       {color:'#8b6914',bg:'#fdf5e6',min:80000,disc:[],fixed:true},
+};const BRAND_CATS = {"Go Paw":["MASCOTAS"]};
+
+function isGoBrand(b) { return b && (b.toUpperCase().startsWith('GO')||b==='Ambar'||b==='The Fruit Company'||b==='Aroma Home'); }
+
+const VALIDATORS = {
+  name:  v => v.trim().split(' ').filter(x=>x).length >= 2,
+  rut:   v => /^(\d{1,2}\.\d{3}\.\d{3}|\d{7,8})-[\dkK]$/.test(v.trim()),
+  email: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()),
+  phone: v => { const d=v.replace(/[^\d]/g,''); return d.length>=8 && d.length<=12; },
+  addr:  v => v.trim().length >= 5 && /\d/.test(v),
+  free:  v => v.trim().length >= 2,
+};
+
+function liveVal(el, type) {
+  if (!el.value) { 
+    el.classList.remove('err','good');
+    const ferr = el.parentNode.querySelector('.ferr');
+    const fhint = el.parentNode.querySelector('.fhint');
+    if(ferr) ferr.style.display='none';
+    if(fhint) fhint.style.display='';
+    return; 
+  }
+  const ok = VALIDATORS[type] ? VALIDATORS[type](el.value) : el.value.trim().length>0;
+  el.classList.toggle('err', !ok);
+  el.classList.toggle('good', ok);
+  const ferr = el.parentNode.querySelector('.ferr');
+  const fhint = el.parentNode.querySelector('.fhint');
+  if(ferr) ferr.style.display = ok ? 'none' : 'block';
+  if(fhint) fhint.style.display = ok ? '' : 'none';
+}
+
+function validateAll(fields) {
+  let allOk = true, first = null;
+  for (const [id, type] of fields) {
+    const el = document.getElementById(id); if (!el) continue;
+    const ok = VALIDATORS[type] ? VALIDATORS[type](el.value) : el.value.trim().length>0;
+    el.classList.toggle('err', !ok);
+    el.classList.toggle('good', ok);
+    const ferr = el.parentNode.querySelector('.ferr');
+    const fhint = el.parentNode.querySelector('.fhint');
+    if(ferr) ferr.style.display = ok ? 'none' : 'block';
+    if(fhint) fhint.style.display = ok ? '' : 'none';
+    if (!ok && !first) first = el;
+    if (!ok) allOk = false;
+  }
+  if (first) { first.focus(); first.scrollIntoView({behavior:'smooth', block:'center'}); }
+  return allOk;
+}
+
+let cart={}, okEmp=false, curBrand='all', curCat='all', curPage=1, filtered=[], tipoDoc='factura';
+const PG=48;
+
+function setTipo(t) {
+  tipoDoc=t;
+  document.getElementById('opt_boleta').classList.toggle('selected', t==='boleta');
+  document.getElementById('opt_factura').classList.toggle('selected', t==='factura');
+  document.getElementById('secBoleta').style.display = t==='boleta'?'block':'none';
+  document.getElementById('secFactura').style.display = t==='factura'?'block':'none';
+}
+function toggleDirDesp() {
+  document.getElementById('secDirDesp').style.display = document.getElementById('f_diff').checked?'block':'none';
+}
+
+function verifyAddr(calleId, comunaId, ciudadId) {
+  var calle = document.getElementById(calleId) ? document.getElementById(calleId).value.trim() : '';
+  var comuna = comunaId && document.getElementById(comunaId) ? document.getElementById(comunaId).value.trim() : '';
+  var ciudad = ciudadId && document.getElementById(ciudadId) ? document.getElementById(ciudadId).value.trim() : '';
+  if (!calle) { alert('Ingresa primero la dirección para verificar.'); return; }
+  var query = [calle, comuna, ciudad, 'Chile'].filter(Boolean).join(', ');
+  var previewId = 'map-' + calleId;
+  var existing = document.getElementById(previewId);
+  if (existing) { existing.remove(); }
+  var src = 'https://maps.google.com/maps?q=' + encodeURIComponent(query) + '&output=embed&hl=es';
+  // Autocompletar comuna y ciudad via Nominatim si se pasan esos ids
+  if (comunaId || ciudadId) {
+    var parts = query.split(',').map(function(s){return s.trim();}).filter(Boolean);
+    if (comunaId && parts.length >= 2) {
+      var cel = document.getElementById(comunaId);
+      if (cel && !cel.value.trim()) cel.value = parts[1];
+    }
+    if (ciudadId && parts.length >= 3) {
+      var zel = document.getElementById(ciudadId);
+      if (zel && !zel.value.trim()) zel.value = parts.slice(2).join(', ');
+    }
+    fetch('https://nominatim.openstreetmap.org/search?format=json&countrycodes=cl&addressdetails=1&q=' + encodeURIComponent(query + ', Chile'))
+      .then(function(r){return r.json();})
+      .then(function(data){
+        if (!data || !data[0] || !data[0].address) return;
+        var addr = data[0].address;
+        if (comunaId) {
+          var cel2 = document.getElementById(comunaId);
+          if (cel2) { var v = addr.suburb||addr.neighbourhood||addr.city_district||addr.town||addr.municipality||''; if(v) cel2.value=v; }
+        }
+        if (ciudadId) {
+          var zel2 = document.getElementById(ciudadId);
+          if (zel2) { var r2 = addr.state||''; var ci = addr.city||addr.town||''; zel2.value = (ci&&r2)?ci+', '+r2:r2||ci; }
+        }
+      }).catch(function(){});
+  }
+  var div = document.createElement('div');
+  div.id = previewId;
+  div.className = 'map-preview';
+  div.style.display = 'block';
+  div.innerHTML =
+    '<div class="map-addr">📍 ' + query + '</div>' +
+    '<iframe src="' + src + '" allowfullscreen loading="lazy"></iframe>' +
+    '<div style="padding:8px 12px;background:#fff0f8;border-top:1px solid #f9a8d4;display:flex;gap:8px;align-items:center">' +
+    '<span style="font-size:.72rem;color:#be185d">¿Es correcta la dirección?</span>' +
+    '<button class="map-btn" style="background:#15803d;padding:.35rem .75rem;font-size:.72rem" onclick="document.getElementById(\'' + previewId + '\').remove()">✓ Sí, es correcta</button>' +
+    '<button class="map-btn" style="background:#888;padding:.35rem .75rem;font-size:.72rem" onclick="document.getElementById(\'' + previewId + '\').remove()">✕ Cerrar</button>' +
+    '</div>';
+  var input = document.getElementById(calleId);
+  input.parentNode.insertBefore(div, input.nextSibling);
+}
+
+// Global image error handler - runs once on page load
+document.addEventListener('error', function(e) {
+  if (!e.target || !e.target.classList) return;
+  // Catalog cards
+  if (e.target.classList.contains('pimg-real')) {
+    var k = e.target.getAttribute('data-k');
+    e.target.style.display = 'none';
+    var sw = document.getElementById('sw-' + k);
+    if (sw) sw.style.display = 'flex';
+  }
+
+}, true);
+
+function init() {
+  document.getElementById('brandsBar').innerHTML =
+    ['all',...BRAND_ORDER].map(b =>
+      '<button class="bbtn '+(b==='all'?'active':'')+'" data-b="'+b+'" onclick="setBrand(\''+b+'\',this)">'+(b==='all'?'Todos':b)+'</button>'
+    ).join('');
+  renderCatsBar();
+  document.getElementById('minBanners').innerHTML = '<div style=\'background:#1a0a2e;padding:10px 18px;border-radius:12px 12px 0 0;display:flex;align-items:center;gap:8px\'><span style=\'color:#e91e8c;font-weight:800;font-size:.88rem;text-transform:uppercase;letter-spacing:.5px\'>! Condiciones de Compra</span><span style=\'color:rgba(255,255,255,.5);font-size:.73rem\'>— Lee antes de agregar productos</span></div><div style=\'display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));border:2px solid #1a0a2e;border-top:none;border-radius:0 0 12px 12px;overflow:hidden;margin-bottom:1rem\'><div style=\'padding:14px 16px;background:#fff;border-right:1px solid #e0deda\'><div style=\'font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.8px;color:#e91e8c;margin-bottom:6px\'>Nail Pro &amp; Avry Beauty</div><div style=\'font-size:.8rem;color:#1a0a2e;line-height:1.7\'>Min. pedido: <b>$180.000</b><br><span style=\'color:#15803d;font-weight:700\'>5% dcto</span> sobre <b>$360.000</b><br><span style=\'color:#15803d;font-weight:700\'>10% dcto</span> sobre <b>$720.000</b><br><span style=\'font-size:.7rem;color:#999\'>(Descuento aplica sobre total del pedido)</span></div></div><div style=\'padding:14px 16px;background:#fff;border-right:1px solid #e0deda\'><div style=\'font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.8px;color:#c8a415;margin-bottom:6px\'>Bluesky</div><div style=\'font-size:.8rem;color:#1a0a2e;line-height:1.7\'>Min. de compra: <b>$100.000</b><br><span style=\'color:#15803d;font-weight:700\'>5% dcto</span> sobre <b>$800.000</b><br><span style=\'font-size:.7rem;color:#999\'>Precio fijo bajo ese monto</span></div></div><div style=\'padding:14px 16px;background:#fff\'><div style=\'font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.8px;color:#b01060;margin-bottom:6px\'>MARCAS GO + HOGAR</div><div style=\'font-size:.8rem;color:#1a0a2e;line-height:1.7\'>Min. combinado (todas las Go): <b>$80.000</b><br><span style=\'color:#b01060;font-weight:800\'>PRECIO FIJO</span> — Sin descuentos<br><span style=\'font-size:.7rem;color:#999\'>Go Nails · Go Hair · Go Paw · Go Living · Ambar · The Fruit Company · Aroma Home</span></div></div><div style=\'padding:14px 16px;background:#fff\'><div style=\'font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.8px;color:#444;margin-bottom:6px\'>Artistic Nails</div><div style=\'font-size:.8rem;color:#1a0a2e;line-height:1.7\'><span style=\'color:#444;font-weight:800\'>PRECIO FIJO</span> — Sin descuentos<br><span style=\'color:#15803d;font-weight:700\'>Sin mínimo de compra</span><br><span style=\'font-size:.7rem;color:#999\'>Suma para el dcto de Nail Pro/Avry</span></div></div></div><div style=\'background:#fffbeb;border:1px solid #fcd34d;border-radius:8px;padding:8px 14px;margin-bottom:.85rem;font-size:.75rem;color:#92400e;font-weight:700;text-align:center\'>Minimo total del pedido: $180.000 — Bluesky NO suma para el descuento de Nail Pro/Avry. Todo lo demas si.</div>';
+  doFilter();
+}
+
+function setBrand(b,el) {
+  curBrand=b; curCat='all'; curPage=1;
+  document.querySelectorAll('.bbtn').forEach(x=>x.classList.remove('active'));
+  el.classList.add('active');
+  renderCatsBar();
+  doFilter();
+}
+
+function setCat(el) {
+  const label = el.textContent;
+  curCat = (label === 'Todas') ? 'all' : label;
+  curPage=1;
+  document.querySelectorAll('.cbtn').forEach(x=>x.classList.remove('active'));
+  el.classList.add('active');
+  doFilter();
+  var grid=document.getElementById('pgrid');if(grid){var top=grid.getBoundingClientRect().top+window.scrollY-80;window.scrollTo({top:Math.max(0,top),behavior:'smooth'});}
+}
+
+function renderCatsBar() {
+  const bar = document.getElementById('catsBar');
+  let validCats = [];
+  if (curBrand === 'all') {
+    // Merge all categories from all brands, deduplicated and sorted
+    const allCats = new Set();
+    Object.values(BRAND_CATS).forEach(function(cats) {
+      cats.forEach(function(c) { if(c && c.trim()) allCats.add(c.trim()); });
+    });
+    validCats = Array.from(allCats).sort();
+  } else {
+    validCats = (BRAND_CATS[curBrand] || []).filter(function(c){ return c && c.trim(); });
+  }
+  if (validCats.length <= 1) { bar.style.display='none'; return; }
+  bar.style.display='flex';
+  let btns = '<span class="clabel">Categoría:</span>';
+  ['all', ...validCats].forEach(function(c) {
+    const isActive = (c === 'all' && curCat === 'all') || c === curCat;
+    const label = c === 'all' ? 'Todas' : c;
+    btns += '<button class="cbtn' + (isActive ? ' active' : '') + '" onclick="setCat(this)">' + label + '</button>';
+  });
+  bar.innerHTML = btns;
+}
+
+function doFilter() {
+  const q=(document.getElementById('srchInp').value||'').toLowerCase().trim();
+  filtered = PRODUCTS_DATA.filter(p => {
+    const matchBrand = curBrand==='all' || p.b===curBrand;
+    const matchCat = curCat==='all' || p.c===curCat;
+    const matchQ = !q || (p.n||'').toLowerCase().includes(q) || (p.sku||'').toLowerCase().includes(q);
+    if (!q) {
+        if (p.unavail) return false;
+        if (['Bluesky','Go Nails','Go Hair','Go Paw','Go Living'].includes(p.b) && p.stock<12) return false;
+        else if (p.stock<6) return false;
+      }
+    return matchBrand && matchCat && matchQ;
+  }).sort((a,b)=>{const na=(a.n||'').toUpperCase(),nb=(b.n||'').toUpperCase();return na<nb?-1:na>nb?1:0;});
+  curPage=1; renderGrid(); renderPag();
+  var ri=document.getElementById('resultInfo');if(ri){ri.textContent=filtered.length===0?'Sin resultados para esta selección':(filtered.length===1?'1 producto encontrado':filtered.length+' productos encontrados');}
+}
+
+function renderGrid() {
+  const grid = document.getElementById('pgrid');
+  const sl = filtered.slice((curPage-1)*PG, curPage*PG);
+  if (!sl.length) { grid.innerHTML='<div class="nores">😕 Sin resultados</div>'; return; }
+  let html = '';
+  for (const p of sl) {
+    const cfg = BRAND_CFG[p.b] || {color:'#666',bg:'#f5f5f5'};
+    const qty = cart[p.sku]?.qty || 0;
+    const k = p.sku.replace(/[^a-zA-Z0-9]/g,'_');
+    const logoImg = ''; // Brand name already in product title
+    // Image area: clean approach using data-k for error handling
+    const swatchInner = '<div class="pswatch-c" style="background:'+(p.clr||'#b0b0b0')+'"></div><div class="pswatch-l">'+(p.sku||'')+'</div>';
+    let imgHtml;
+    if (p.img) {
+      imgHtml = '<img class="pimg-real" src="'+p.img+'" loading="lazy" data-k="'+k+'">'
+        + '<div class="pswatch" id="sw-'+k+'" style="display:none;background:'+cfg.bg+'">'+swatchInner+'</div>';
+    } else {
+      imgHtml = '<div class="pswatch" style="background:'+cfg.bg+'">'+swatchInner+'</div>';
+    }
+    const cardStyle = p.unavail ? 'opacity:.55;filter:grayscale(.3)' : '';
+    let actionsHtml;
+    if (p.unavail) {
+      actionsHtml = '<div class="unavail-tag">🚫 No disponible</div>';
+    } else {
+      actionsHtml = '<div class="qrow">'
+        +'<button class="qbtn" onclick="chgQ(\''+p.sku+'\',-1)">−</button>'
+        +'<input class="qinp" type="number" min="0" value="'+qty+'" id="qi-'+k+'" onchange="setQ(\''+p.sku+'\',this.value)"/>'
+        +'<button class="qbtn" onclick="chgQ(\''+p.sku+'\',1)">+</button>'
+        +'</div>'
+        +'<button class="abtn'+(qty>0?' added':'')+'" id="ab-'+k+'" onclick="addC(\''+p.sku+'\')">'+(qty>0?'✓ Agregado':'Agregar')+'</button>';
+    }
+    html += '<div class="pcard" style="'+cardStyle+'">'
+      +'<div class="pimg-wrap" style="background:'+cfg.bg+'">'+imgHtml+'</div>'
+      +'<div class="pbody">'+logoImg
+      +'<div class="pname">'+p.n+'</div>'
+      +'<div class="psku">SKU: '+p.sku+'</div>'
+      +(p.ps!=null?'<div class="pps">PVP sugerido: $'+p.ps.toLocaleString('es-CL')+'</div>':'')
+      +(p.pm!=null?'<div class="ppm">$'+p.pm.toLocaleString('es-CL')+' <small style="font-weight:400;font-size:.7rem;color:var(--mu)">/und</small></div>':'')
+      +actionsHtml+'</div></div>';
+  }
+  grid.innerHTML = html;
+}
+
+function renderPag() {
+  const tot=filtered.length, pgs=Math.ceil(tot/PG), el=document.getElementById('pag');
+  if (pgs<=1) { el.innerHTML=''; return; }
+  const s=(curPage-1)*PG+1, e=Math.min(curPage*PG,tot);
+  let h='<span class="pginfo">'+s+'-'+e+' de '+tot+'</span>';
+  h+='<button class="pbtn2" onclick="goPg('+(curPage-1)+')" '+(curPage===1?'disabled':'')+'>‹</button>';
+  for (let i=1;i<=pgs;i++) {
+    if (pgs>8&&Math.abs(i-curPage)>2&&i!==1&&i!==pgs) { if(i===2||i===pgs-1) h+='<span style="padding:0 4px">…</span>'; continue; }
+    h+='<button class="pbtn2'+(i===curPage?' active':'')+'" onclick="goPg('+i+')">'+i+'</button>';
+  }
+  h+='<button class="pbtn2" onclick="goPg('+(curPage+1)+')" '+(curPage===pgs?'disabled':'')+'>›</button>';
+  el.innerHTML=h;
+}
+function goPg(n){curPage=n;renderGrid();renderPag();window.scrollTo(0,120);}
+
+function sid(s){return s.replace(/[^a-zA-Z0-9]/g,'_');}
+function chgQ(sku,d){const i=document.getElementById('qi-'+sid(sku));if(i)setQ(sku,Math.max(0,(parseInt(i.value)||0)+d));}
+function setQ(sku,val){
+  const qty=Math.max(0,parseInt(val)||0);
+  const p=PRODUCTS_DATA.find(x=>x.sku===sku); if(!p)return;
+  if(qty>0)cart[sku]={product:p,qty};else delete cart[sku];
+  const i=document.getElementById('qi-'+sid(sku)); if(i)i.value=qty;
+  const a=document.getElementById('ab-'+sid(sku));
+  if(a){a.textContent=qty>0?'✓ Agregado':'Agregar';a.className='abtn'+(qty>0?' added':'');}
+  updCnt();
+}
+function addC(sku){const i=document.getElementById('qi-'+sid(sku));setQ(sku,i?Math.max(1,parseInt(i.value)||1):1);}
+function updCnt(){
+  const n=Object.values(cart).reduce((s,i)=>s+i.qty,0);
+  document.getElementById('hcnt').textContent=n;
+  document.getElementById('cartCnt2').textContent=n;
+}
+
+function getBT(){
+  const bt={};
+  for(const {product:p,qty} of Object.values(cart)){
+    if(!bt[p.b])bt[p.b]={raw:0,items:[]};
+    bt[p.b].raw+=p.pm*qty; bt[p.b].items.push({...p,qty});
+  }
+  return bt;
+}
+function ep(brand,raw,pm,rawTotal){
+  const cfg=BRAND_CFG[brand]; if(!cfg||!cfg.disc.length)return pm;
+  const ref=(brand==='Nail Pro'||brand==='Avry Beauty')?(rawTotal||raw):raw;
+  let pct=0; for(const d of cfg.disc)if(ref>=d.at)pct=d.pct;
+  return Math.round(pm*(1-pct/100));
+}
+function getRawTotalForDisc(bt){
+  // Bluesky excluded, everything else counts toward NP/Avry discount
+  var total=0;
+  for(var b in bt){
+    if(!(BRAND_CFG[b]&&BRAND_CFG[b].excludeFromNPDisc)) total+=bt[b].raw;
+  }
+  return total;
+}
+
+function calcTotal(bt){
+  bt=bt||getBT();
+  let rawTotal=getRawTotalForDisc(bt);
+  let totalConIva=0; for(const [b,d] of Object.entries(bt))for(const i of d.items)totalConIva+=ep(b,d.raw,i.pm,rawTotal)*i.qty;
+  return totalConIva; // prices already include IVA
+}
+
+function calcTotals(bt){
+  // Returns {totalConIva, neto, iva, descuento}
+  bt=bt||getBT();
+  let rawTotal=getRawTotalForDisc(bt);
+  let sinDesc=0, conDesc=0;
+  for(const [b,d] of Object.entries(bt))for(const i of d.items){
+    sinDesc+=i.pm*i.qty;
+    conDesc+=ep(b,d.raw,i.pm,rawTotal)*i.qty;
+  }
+  const neto=Math.round(conDesc/1.19);
+  const iva=conDesc-neto;
+  const descuento=sinDesc-conDesc;
+  return {totalConIva:conDesc, neto, iva, descuento, sinDesc};
+}
+
+function getClient(){
+  const qNombre = document.getElementById('q_nombre').value;
+  const qRut    = document.getElementById('q_rut').value;
+  const qEmail  = document.getElementById('q_email').value;
+  if(tipoDoc==='boleta') return {tipo:'Boleta',
+    nombre:qNombre, rut:document.getElementById('b_rut').value, email:qEmail,
+    tel:document.getElementById('b_tel').value,
+    dir:document.getElementById('b_calle').value+(document.getElementById('b_depto').value?', '+document.getElementById('b_depto').value:''),
+    comuna:document.getElementById('b_comuna').value,
+    ciudad:document.getElementById('b_ciudad').value
+  };
+  return {tipo:'Factura',
+    nombre:qNombre, rut:qRut, email:qEmail,
+    razon:document.getElementById('f_razon').value,
+    rut:document.getElementById('f_rut').value,
+    giro:document.getElementById('f_giro').value,
+    dir_fact:document.getElementById('f_dir_fact').value,
+    contacto:qNombre,
+    tel:document.getElementById('f_tel').value,
+    dir_desp:document.getElementById('f_diff').checked?document.getElementById('f_dir_desp').value:document.getElementById('f_dir_fact').value
+  };
+}
+
+function renderCart(){
+  const cl=getClient();
+  const sumpEl=document.getElementById('cSump');
+  if(tipoDoc==='boleta'){
+    sumpEl.innerHTML='<strong>'+cl.nombre+'</strong>RUT: '+cl.rut+'<br>📧 '+cl.email+(cl.tel?' · 📞 '+cl.tel:'')+(cl.dir?'<br>📍 '+cl.dir+(cl.comuna?', '+cl.comuna:'')+(cl.ciudad?', '+cl.ciudad:''):'')+'<br>🧾 Boleta';
+  }else{
+    sumpEl.innerHTML='<strong>'+cl.nombre+'</strong>RUT: '+cl.rut+'<br>📧 '+cl.email+(cl.tel?' · 📞 '+cl.tel:'')+(cl.razon?'<br>🏢 '+cl.razon+' · Giro: '+cl.giro:'')+(cl.dir_fact?'<br>📍 '+cl.dir_fact:'')+'<br>🧾 Factura';
+  }
+  const items=Object.values(cart);
+  if(!items.length){
+    document.getElementById('cartTbl').innerHTML='<div class="cempty">🛒 El carrito está vacío</div>';
+    ['bSummary','sumRows','alerts'].forEach(id=>document.getElementById(id).innerHTML='');
+    ['totAmt','totIva','totFin'].forEach(id=>document.getElementById(id).textContent='$0');
+    document.getElementById('previewBtn').disabled=true;
+    document.getElementById('previewBtn').style.opacity='.5';
+    return;
+  }
+  const bt=getBT();
+  let rawTotal=getRawTotalForDisc(bt);
+  let rows='';
+  for(const [brand,data] of Object.entries(bt)){
+    rows+='<tr><td colspan="5" style="padding:.4rem .9rem;background:var(--bg);font-size:.7rem;font-weight:700;color:var(--mu);text-transform:uppercase">'+brand+'</td></tr>';
+    for(const item of data.items){
+      const e=ep(brand,data.raw,item.pm,rawTotal), disc=e<item.pm;
+      const imgThumb = item.img
+        ? '<img src="'+item.img+'" style="width:44px;height:44px;object-fit:contain;border-radius:6px;background:#f5f4f1;flex-shrink:0;border:1px solid #e5e2de">'
+          +'<div style="display:none;width:44px;height:44px;border-radius:6px;background:'+(item.clr||'#ddd')+';flex-shrink:0"></div>'
+        : '<div style="width:44px;height:44px;border-radius:6px;background:'+(item.clr||'#ddd')+';flex-shrink:0;border:1px solid #e5e2de"></div>';
+      rows+='<tr><td style="display:flex;align-items:center;gap:10px">'+imgThumb+'<div><div style="font-weight:600;font-size:.79rem">'+item.n+'</div><div style="font-size:.63rem;color:var(--mu)">SKU: '+item.sku+'</div></div></td>'
+        +'<td style="white-space:nowrap;font-size:.79rem">'+(disc?'<div style="text-decoration:line-through;color:var(--mu);font-size:.67rem">$'+item.pm.toLocaleString('es-CL')+'</div>':'')+'<strong>$'+e.toLocaleString('es-CL')+'</strong>'+(disc?'<div style="color:var(--ok);font-size:.63rem;font-weight:700">Con dscto</div>':'')+'</td>'
+        +'<td style="text-align:center"><input class="qinp" type="number" min="0" value="'+item.qty+'" style="width:50px" onchange="setQC(\''+item.sku+'\',this.value)"/></td>'
+        +'<td style="font-weight:700;font-size:.81rem;white-space:nowrap">$'+(e*item.qty).toLocaleString('es-CL')+'</td>'
+        +'<td><button class="rmbtn" onclick="rmItem(\''+item.sku+'\')">✕</button></td></tr>';
+    }
+  }
+  document.getElementById('cartTbl').innerHTML='<table class="ctbl"><thead><tr><th>Producto</th><th>Precio</th><th style="text-align:center">Cant.</th><th>Subtotal</th><th></th></tr></thead><tbody>'+rows+'</tbody></table>';
+  // Calculate Go brands combined total
+  let goTotal = 0;
+  for(const [brand,data] of Object.entries(bt)){
+    if(isGoBrand(brand)){
+      let eff=0; for(const i of data.items)eff+=ep(brand,data.raw,i.pm,rawTotal)*i.qty;
+      goTotal += eff;
+    }
+  }
+  const GO_MIN = 80000;
+  const goOk = goTotal === 0 || goTotal >= GO_MIN;
+
+  let bh='';
+  // Show Go brands grouped
+  let goShown = false;
+  for(const [brand,data] of Object.entries(bt)){
+    const cfg=BRAND_CFG[brand];
+    let eff=0; for(const i of data.items)eff+=ep(brand,data.raw,i.pm,rawTotal)*i.qty;
+
+    if(isGoBrand(brand)){
+      if(!goShown){
+        // Show all Go brands as one block
+        const goNames = Object.keys(bt).filter(b=>isGoBrand(b)).join(' + ');
+        bh+='<div class="bblk"><div class="bblk-h"><span>'+goNames+'</span><span>$'+goTotal.toLocaleString('es-CL')+'</span></div>'
+          +'<div class="'+(goOk?'bok':'bwarn')+'">'+(goOk?'✓ Mínimo $80.000 cumplido (marcas Go combinadas)':'⚠ Mín $80.000 combinado — faltan $'+(GO_MIN-goTotal).toLocaleString('es-CL'))+'</div>'
+          +'</div>';
+        goShown=true;
+      }
+      continue; // skip individual Go brand blocks
+    }
+
+    // Non-Go brands
+    const mn=cfg?.min||0, okMin=mn===0||eff>=mn;
+    let dn='';
+    if(cfg?.disc.length){
+      const isNP = (brand==='Nail Pro'||brand==='Avry Beauty');
+      const ref = isNP ? rawTotal : data.raw;
+      const refLabel = isNP ? rawTotal : data.raw; // Bluesky shows its own total
+      for(const d of cfg.disc)if(ref>=d.at)dn='✓ '+d.pct+'% dscto aplicado (subtotal '+brand+' $'+refLabel.toLocaleString('es-CL')+')';
+      if(!dn){const nx=cfg.disc.find(d=>ref<d.at);if(nx)dn='Faltan $'+(nx.at-ref).toLocaleString('es-CL')+' para '+nx.pct+'% dscto en '+brand;}
+    }
+    bh+='<div class="bblk"><div class="bblk-h"><span>'+brand+'</span><span>$'+eff.toLocaleString('es-CL')+'</span></div>'
+      +(mn>0?'<div class="'+(okMin?'bok':'bwarn')+'">'+(okMin?'✓ Mínimo cumplido':'⚠ Mín $'+mn.toLocaleString('es-CL')+' — faltan $'+(mn-eff).toLocaleString('es-CL'))+'</div>':'')
+      +(dn?'<div class="bok" style="color:#c8a415">'+dn+'</div>':'')+'</div>';
+  }
+  document.getElementById('bSummary').innerHTML=bh;
+  const tots=calcTotals(bt);
+  document.getElementById('totAmt').textContent='$'+tots.neto.toLocaleString('es-CL');
+  document.getElementById('totIva').textContent='$'+tots.iva.toLocaleString('es-CL');
+  document.getElementById('totFin').textContent='$'+tots.totalConIva.toLocaleString('es-CL');
+  // Show discount if any
+  const discEl=document.getElementById('totDesc');
+  if(discEl){
+    if(tots.descuento>0){
+      discEl.innerHTML='<div class="stot" style="font-size:.82rem;color:var(--ok);font-weight:700;border:none;padding-top:2px"><span>🎉 Descuento aplicado</span><span>−$'+tots.descuento.toLocaleString('es-CL')+'</span></div>';
+    } else { discEl.innerHTML=''; }
+  }
+  // Regalo sorpresa: 1 regalo por cada $300.000 (total con IVA)
+  const giftEl=document.getElementById('giftMsg');
+  if(giftEl){
+    const numRegalos=Math.floor(tots.totalConIva/300000);
+    if(numRegalos>=1){
+      const rStr=numRegalos===1?'1 regalo sorpresa':numRegalos+' regalos sorpresa';
+      giftEl.innerHTML='<div style="background:#fff8e1;border:2px solid #f9c74f;border-radius:10px;padding:.75rem 1rem;margin-top:.5rem;font-size:.84rem;font-weight:700;color:#7b5e00">🎁 ¡Llevas <strong>'+rStr+'</strong>! Son aleatorios y cambian cada mes.</div>';
+    } else {
+      giftEl.innerHTML='';
+    }
+  }
+  document.getElementById('sumRows').innerHTML=Object.values(cart).slice(0,5).map(function(item){
+    var p=item.product, qty=item.qty;
+    var e=ep(p.b,bt[p.b]?.raw||0,p.pm,rawTotal);
+    return '<div class="srow"><span>'+p.n.substring(0,28)+'… x'+qty+'</span><span>$'+(e*qty).toLocaleString('es-CL')+'</span></div>';
+  }).join('')+(Object.keys(cart).length>5?'<div class="srow" style="font-style:italic">... y '+(Object.keys(cart).length-5)+' más</div>':'');
+  const errs=[];
+  // Check Go brands combined minimum
+  if(goTotal > 0 && goTotal < GO_MIN){
+    const goNames = Object.keys(bt).filter(b=>isGoBrand(b)).join(', ');
+    errs.push('<div class="alert warn">⚠ <b>'+goNames+'</b>: mínimo $80.000 combinado — faltan $'+(GO_MIN-goTotal).toLocaleString('es-CL')+'</div>');
+  }
+  // Check non-Go brand minimums individually
+  for(const [brand,data] of Object.entries(bt)){
+    if(isGoBrand(brand)) continue;
+    const cfg=BRAND_CFG[brand];
+    let eff=0; for(const i of data.items)eff+=ep(brand,data.raw,i.pm,rawTotal)*i.qty;
+    if(cfg?.min&&eff<cfg.min)errs.push('<div class="alert warn">⚠ <b>'+brand+'</b>: mín $'+cfg.min.toLocaleString('es-CL')+' — faltan $'+(cfg.min-eff).toLocaleString('es-CL')+'</div>');
+  }
+  document.getElementById('alerts').innerHTML=errs.join('');
+  const okBtn=errs.length===0;
+  document.getElementById('previewBtn').disabled=!okBtn;
+  document.getElementById('previewBtn').style.opacity=okBtn?1:.5;
+}
+
+
+function checkEmailDomain(email) {
+  var conf = document.getElementById('emailConfirm');
+  var warn = document.getElementById('emailWarn');
+  if (!conf || !warn) return;
+  var m = email.trim().match(/^[^\s@]+@([^\s@]+\.[^\s@]+)$/);
+  if (!m) { conf.style.display='none'; warn.style.display='none'; return; }
+  var domain = m[1].toLowerCase();
+  conf.textContent = '📧 Tu respaldo llegará a: ' + email.trim();
+  conf.style.display = 'block';
+  var typos = {
+    'gmai.com':'gmail.com','gmial.com':'gmail.com','gmail.con':'gmail.com',
+    'hotmai.com':'hotmail.com','hotmail.con':'hotmail.com','otmail.com':'hotmail.com',
+    'outlok.com':'outlook.com','outloook.com':'outlook.com','outlook.con':'outlook.com',
+    'yaho.com':'yahoo.com','yahoo.con':'yahoo.com'
+  };
+  if (typos[domain]) {
+    warn.textContent = '⚠️ ¿Quisiste escribir @' + typos[domain] + '? Verifica tu correo.';
+    warn.style.display = 'block';
+  } else {
+    warn.style.display = 'none';
+  }
+}
+function setQC(sku,val){setQ(sku,val);renderCart();}
+function rmItem(sku){
+  delete cart[sku];
+  const i=document.getElementById('qi-'+sid(sku)); if(i)i.value=0;
+  const a=document.getElementById('ab-'+sid(sku)); if(a){a.textContent='Agregar';a.className='abtn';}
+  updCnt(); renderCart();
+}
+
+let curPanel=0;
+function goStep(n){
+  if(n>0&&!okEmp){alert('Completa primero tus datos.');return;}
+  curPanel=n;
+  document.querySelectorAll('.panel').forEach((p,i)=>p.classList.toggle('active',i===n));
+  document.querySelectorAll('.stp').forEach((s,i)=>{s.classList.remove('active','done');if(i===n)s.classList.add('active');else if(i<n)s.classList.add('done');});
+  if(n===2)renderCart();
+  var nb=document.getElementById('noticeFija');if(nb)nb.style.display=(n===1||n===2)?'block':'none';
+  window.scrollTo(0,0);
+}
+
+function nextToProducts(){
+  // Paso 1: solo valida nombre y email para acceder al catálogo
+  const fields=[['q_nombre','name'],['q_email','email']];
+  if(!validateAll(fields)){alert('Completa los campos marcados en rojo para continuar.');return;}
+  okEmp=true; goStep(1);
+}
+
+function openPreview(){
+  const bt=getBT(), cl=getClient();
+  let rawTotal=getRawTotalForDisc(bt);
+  const previewTots=calcTotals(bt);
+  const g=previewTots.totalConIva, iva=previewTots.iva, neto=previewTots.neto, descuento=previewTots.descuento;
+  const date=new Date().toLocaleDateString('es-CL',{day:'2-digit',month:'long',year:'numeric'});
+  let cRows='';
+  if(tipoDoc==='boleta'){
+    cRows='<div class="prev-row"><span class="lbl">Tipo</span><span>Boleta</span></div>'
+      +'<div class="prev-row"><span class="lbl">Nombre</span><span>'+cl.nombre+'</span></div>'
+      +'<div class="prev-row"><span class="lbl">RUT</span><span>'+cl.rut+'</span></div>'
+      +'<div class="prev-row"><span class="lbl">Teléfono</span><span>'+cl.tel+'</span></div>'
+      +'<div class="prev-row"><span class="lbl">Email</span><span>'+cl.email+'</span></div>'
+      +'<div class="prev-row"><span class="lbl">Dirección</span><span>'+cl.dir+', '+cl.comuna+(cl.ciudad?', '+cl.ciudad:'')+'</span></div>';
+  }else{
+    cRows='<div class="prev-row"><span class="lbl">Tipo</span><span>Factura</span></div>'
+      +'<div class="prev-row"><span class="lbl">Razón social</span><span>'+cl.razon+'</span></div>'
+      +'<div class="prev-row"><span class="lbl">RUT empresa</span><span>'+cl.rut+'</span></div>'
+      +'<div class="prev-row"><span class="lbl">Giro</span><span>'+cl.giro+'</span></div>'
+      +'<div class="prev-row"><span class="lbl">Dir. facturación</span><span>'+cl.dir_fact+'</span></div>'
+      +'<div class="prev-row"><span class="lbl">Contacto</span><span>'+cl.contacto+'</span></div>'
+      +'<div class="prev-row"><span class="lbl">Teléfono</span><span>'+cl.tel+'</span></div>'
+      +'<div class="prev-row"><span class="lbl">Email</span><span>'+cl.email+'</span></div>'
+      +'<div class="prev-row"><span class="lbl">Dir. despacho</span><span>'+cl.dir_desp+'</span></div>';
+  }
+  let pRows='';
+  for(const [brand,data] of Object.entries(bt)){
+    pRows+='<tr class="bsep"><td colspan="5">'+brand+'</td></tr>';
+    for(const i of data.items){
+      const e=ep(brand,data.raw,i.pm,rawTotal);
+      const prevClr = i.clr||'#ddd';
+    const prevThumb = i.img
+      ? '<img src="'+i.img+'" style="width:36px;height:36px;object-fit:contain;border-radius:5px;background:#f5f4f1;vertical-align:middle;margin-right:6px;border:1px solid #e5e2de" onerror="this.src=\'\';this.style.background=\''+prevClr+'\'">'
+      : '<span style="display:inline-block;width:36px;height:36px;border-radius:5px;background:'+prevClr+';vertical-align:middle;margin-right:6px"></span>';
+    pRows+='<tr><td>'+i.sku+'</td><td>'+prevThumb+i.n+'</td><td style="text-align:center">'+i.qty+'</td><td style="text-align:right">$'+e.toLocaleString('es-CL')+(e<i.pm?' ✓':'')+'</td><td style="text-align:right;font-weight:700">$'+(e*i.qty).toLocaleString('es-CL')+'</td></tr>';
+    }
+  }
+  const notas=document.getElementById('notas').value;
+  document.getElementById('modalBody').innerHTML=
+    '<div style="text-align:center;margin-bottom:1.25rem;padding-bottom:1rem;border-bottom:1px solid var(--bo)"><div style="font-size:1.1rem;font-weight:800;color:var(--pr)">EPM Mayorista — Portal B2B</div><div style="font-size:.8rem;color:var(--mu);margin-top:3px">'+date+'</div></div>'
+    +'<div class="prev-sec"><h4>📋 Datos</h4>'+cRows+(notas?'<div class="prev-row"><span class="lbl">Notas</span><span>'+notas+'</span></div>':'')+'</div>'
+    +'<div class="prev-sec"><h4>🛒 Productos</h4><table class="prev-tbl"><thead><tr><th>SKU</th><th>Producto</th><th style="text-align:center">Cant.</th><th style="text-align:right">Precio</th><th style="text-align:right">Subtotal</th></tr></thead><tbody>'+pRows+'</tbody></table></div>'
+    +'<div class="prev-tot">'
+    +(descuento>0?'<div class="row" style="color:#86efac;font-weight:700"><span>🎉 Descuento aplicado</span><span>−$'+descuento.toLocaleString('es-CL')+'</span></div>':'')
+    +'<div class="row"><span>Subtotal neto</span><span>$'+neto.toLocaleString('es-CL')+'</span></div>'
+    +'<div class="row"><span>IVA 19%</span><span>$'+iva.toLocaleString('es-CL')+'</span></div>'
+    +'<div class="row main"><span>TOTAL con IVA</span><span>$'+g.toLocaleString('es-CL')+'</span></div></div>';
+  document.getElementById('modalBg').style.display='flex';
+}
+function closePreview(){document.getElementById('modalBg').style.display='none';}
+
+function validateFullForm(){
+  if(tipoDoc==='boleta'){
+    const bFields=[['b_rut','rut'],['b_tel','phone'],['b_calle','addr'],['b_comuna','free']];
+    if(!validateAll(bFields)){alert('Completa el RUT, teléfono y dirección de despacho antes de enviar.');return false;}
+  } else {
+    const fFields=[['f_razon','free'],['f_rut','rut'],['f_giro','free'],['f_dir_fact','addr'],['f_tel','phone']];
+    if(!validateAll(fFields)){alert('Completa los datos de facturación marcados en rojo.');return false;}
+    if(document.getElementById('f_diff')&&document.getElementById('f_diff').checked){
+      const dd=document.getElementById('f_dir_desp');
+      if(!dd||!dd.value.trim()){if(dd){dd.focus();dd.classList.add('err');}alert('Ingresa la dirección de despacho.');return false;}
+    }
+  }
+  return true;
+}
+
+async function submitOrder(){
+  if(!validateFullForm()) return;
+  const sb=document.getElementById('submitBtn');
+  sb.textContent='Enviando…'; sb.disabled=true;
+  const code='B2B-'+Date.now().toString().slice(-6);
+  document.getElementById('ocode').textContent=code;
+  const bt=getBT(), tots=calcTotals(bt);
+  const g=tots.totalConIva, iva=tots.iva;
+  let rawTotal=getRawTotalForDisc(bt);
+  const items=[];
+  for(const [brand,data] of Object.entries(bt))
+    for(const i of data.items){const e=ep(brand,data.raw,i.pm,rawTotal);items.push({sku:i.sku,name:i.n,brand:i.b,qty:i.qty,unitPrice:e,subtotal:e*i.qty});}
+  const payload={type:'pedido',vendedor:'Freelance',code,timestamp:new Date().toISOString(),tipoDoc,cliente:getClient(),notas:document.getElementById('notas').value,items,subtotal:tots.neto,iva:tots.iva,total:tots.totalConIva,descuento:tots.descuento,sendClientEmail:true};
+  if(WEBHOOK_URL){try{await Promise.race([fetch(WEBHOOK_URL,{method:'POST',body:JSON.stringify(payload),headers:{'Content-Type':'application/json'},mode:'no-cors'}),new Promise(r=>setTimeout(r,8000))]);}catch(e){}}
+  // Go to success screen first (before clearing okEmp)
+  sb.textContent='✓ Enviar cotización de pedido'; sb.disabled=false;
+  closePreview();
+  // Show step 3 directly without the okEmp guard
+  document.querySelectorAll('.panel').forEach(function(p,i){p.classList.toggle('active',i===3);});
+  document.querySelectorAll('.stp').forEach(function(s,i){s.classList.remove('active','done');if(i===3)s.classList.add('active');else if(i<3)s.classList.add('done');});
+  window.scrollTo(0,0);
+  // Now reset everything
+  cart={};
+  okEmp=false;
+  curBrand='all';
+  curCat='all';
+  curPage=1;
+  tipoDoc='boleta';
+  ['q_nombre','q_rut','q_email',
+   'b_rut','b_tel','b_calle','b_depto','b_comuna','b_ciudad',
+   'f_razon','f_rut','f_giro','f_dir_fact','f_tel','f_email','f_dir_desp','notas']
+    .forEach(function(id){var e=document.getElementById(id);if(e){e.value='';e.classList.remove('err','good');}});
+  document.getElementById('f_diff').checked=false;
+  document.getElementById('secDirDesp').style.display='none';
+  setTipo('boleta');
+  updCnt();
+  doFilter();
+}
+
+function resetAll(){
+  const _sb=document.getElementById('submitBtn');if(_sb){_sb.textContent='✓ Enviar cotización de pedido';_sb.disabled=false;}
+  cart={}; okEmp=false; curBrand='all'; curCat='all'; curPage=1; tipoDoc='boleta';
+  ['q_nombre','q_rut','q_email',
+   'b_rut','b_tel','b_calle','b_depto','b_comuna','b_ciudad',
+   'f_razon','f_rut','f_giro','f_dir_fact','f_tel','f_email','f_dir_desp','notas']
+    .forEach(id=>{const e=document.getElementById(id);if(e){e.value='';e.classList.remove('err','good');}});
+  document.getElementById('f_diff').checked=false;
+  document.getElementById('secDirDesp').style.display='none';
+  setTipo('boleta');
+  updCnt(); doFilter(); goStep(0);
+}
+
+init();
+</script>
+
+
+
+  <!-- BARRA FIJA AVISO COTIZACIÓN -->
+  <div id="noticeFija" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:999;background:#FEF0F5;border-top:2px solid #E64287;font-family:'Montserrat',sans-serif;box-shadow:0 -2px 12px rgba(230,66,135,.18)">
+    <div style="max-width:560px;margin:0 auto;padding:.55rem 1rem .55rem 1rem">
+      <div style="display:flex;align-items:center;gap:8px;justify-content:space-between">
+        <div style="display:flex;align-items:center;gap:8px;flex:1;min-width:0">
+          <span style="font-size:16px;flex-shrink:0">📋</span>
+          <div style="min-width:0">
+            <p style="margin:0;font-size:.7rem;font-weight:700;color:#1D1C1A">Sobre tu cotización y reserva de stock</p>
+            <p style="margin:0;font-size:.68rem;color:#3a2030;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" id="noticeShort">Stock reservado 48 hrs hábiles desde la Nota de Venta oficial. <span style="color:#E64287;font-weight:600;cursor:pointer" onclick="toggleNotice()">Ver más ▸</span></p>
+            <p style="margin:0;font-size:.68rem;color:#3a2030;line-height:1.55;display:none" id="noticeFull">Tu cotización es una referencia inicial. Una vez que confirmemos el stock y te enviemos la <strong>Nota de Venta oficial</strong>, el stock queda reservado para ti durante <strong>48 horas hábiles</strong>. Si el pago no se confirma, la reserva se libera y deberás generar el pedido nuevamente. <span style="color:#E64287;font-weight:600;cursor:pointer" onclick="toggleNotice()">Ver menos ▴</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+  function toggleNotice(){
+    var s=document.getElementById('noticeShort');
+    var f=document.getElementById('noticeFull');
+    if(f.style.display==='none'){f.style.display='block';s.style.display='none';}
+    else{f.style.display='none';s.style.display='';}
+  }
+  </script>
+
+<script>
+/* BOTONES_DINAMICOS_V4 */
+(function(){
+var bar=document.getElementById('brandsBar');
+var old=bar.querySelectorAll('.bbtn:not([data-b="all"])');
+old.forEach(function(b){b.parentNode.removeChild(b);});
+var ORDER=['Nail Pro','Go Nails','Go Hair','Go Paw','Go Living','Bluesky','Artistic','Avry Beauty','Ambar','The Fruit Company','Aroma Home'];
+var brands=[...new Set(PRODUCTS_DATA.map(function(p){return p.b;}).filter(Boolean))];
+brands.sort(function(x,y){
+  var ix=ORDER.indexOf(x),iy=ORDER.indexOf(y);
+  if(ix>=0&&iy>=0)return ix-iy;
+  if(ix>=0)return -1;
+  if(iy>=0)return 1;
+  return x.localeCompare(y,'es');
+});
+brands.forEach(function(brand){
+  var btn=document.createElement('button');
+  btn.className='bbtn ';
+  btn.setAttribute('data-b',brand);
+  btn.textContent=brand;
+  btn.addEventListener('click',function(){setBrand(brand,this);});
+  bar.appendChild(btn);
+});
+})();
+</script>
+<script id="_minOrderScript">
+(function(){
+var MIN=180000;
+var _mb="<div style='background:#1a0a2e;padding:10px 18px;border-radius:12px 12px 0 0;display:flex;align-items:center;gap:8px'><span style='color:#e91e8c;font-weight:800;font-size:.88rem;text-transform:uppercase;letter-spacing:.5px'>! Condiciones de Compra</span><span style='color:rgba(255,255,255,.5);font-size:.73rem'>&#8594; Lee antes de agregar productos</span></div><div style='display:grid;grid-template-columns:1fr;border:2px solid #1a0a2e;border-top:none;border-radius:0 0 12px 12px;overflow:hidden;margin-bottom:1rem'><div style='padding:14px 18px;background:#fff'><div style='font-weight:800;font-size:.82rem;text-transform:uppercase;margin-bottom:8px;color:#1a0a2e'>GO PAW &middot; MASCOTAS</div><div style='font-size:.82rem;line-height:1.7'><div>Min. de compra: <strong>$180.000</strong></div><div style='color:#15803d;font-weight:700'>PRECIO FIJO &middot; Sin descuentos</div><div>Env&iacute;o gratis</div></div></div></div>";
+function fmt(n){var d='$';return d+Math.round(n).toLocaleString('es-CL');}
+function _fixMb(){var e=document.getElementById('minBanners');if(e)e.innerHTML=_mb;}
+window.addEventListener('load',_fixMb,false);setTimeout(_fixMb,800);
+var s=document.createElement('div');s.id='_minSticky';
+var hd=document.querySelector('header');
+s.style.cssText='position:fixed;top:'+(hd?hd.offsetHeight:60)+'px;left:0;right:0;z-index:9999;font-family:sans-serif;font-size:.85rem;pointer-events:none;box-shadow:0 2px 6px rgba(0,0,0,.15)';
+document.body.appendChild(s);
+function upd(){var t=typeof calcTotal==='function'?calcTotal():0,f=Math.max(0,MIN-t);
+s.innerHTML=f<=0?'<div style="background:#15803d;color:#fff;padding:7px 16px;text-align:center;font-weight:700">&#x2705; Mínimo alcanzado ('+fmt(t)+') — puedes enviar tu pedido</div>':
+'<div style="background:#fff7ed;border-bottom:2px solid #f97316;padding:7px 16px;display:flex;justify-content:space-between;align-items:center"><span>⚠️ Faltan <b>'+fmt(f)+'</b> para el mínimo</span><span style="color:#92400e">'+fmt(t)+' / '+fmt(MIN)+'</span></div>';}
+document.addEventListener('click',function(e){var b=e.target;if(b.id!=='submitBtn')b=(b.closest&&b.closest('#submitBtn'))||null;if(!b)return;var t=typeof calcTotal==='function'?calcTotal():0;if(t<MIN){e.stopImmediatePropagation();e.preventDefault();alert('⚠️ Pedido incompleto\n\nTu carrito lleva '+fmt(t)+'.\nTe faltan '+fmt(MIN-t)+' para alcanzar el mínimo de '+fmt(MIN)+'.\n\nAgrega más productos y vuelve a intentarlo.');}},true);
+(function(){var cb=document.getElementById('catsBar');if(!cb||typeof BRAND_CATS==='undefined')return;var al=[];Object.values(BRAND_CATS).forEach(function(cs){cs.forEach(function(c){if(al.indexOf(c)<0)al.push(c);});});cb.querySelectorAll('button').forEach(function(b){var t=b.textContent.trim();if(t!=='Todas'&&al.indexOf(t)<0)b.remove();});})();
+upd();setInterval(upd,500);
+})();
+</script></body></html>

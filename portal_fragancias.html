@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Portal B2B FRAGANCIAS — EPM</title>
+<style>body{margin:0;background:#1a0a2e;display:flex;align-items:center;justify-content:center;min-height:100vh;flex-direction:column}p{color:#fff;font-family:sans-serif;font-size:1.1rem;margin:8px 0}</style>
+</head><body>
+<p><b style="color:#e91e8c;font-size:1.3rem">EPM</b> Mayorista</p>
+<p>Cargando portal FRAGANCIAS...</p>
+<script>
+fetch('https://raw.githubusercontent.com/CamilaParra92/PORTAL-B2B-EPM-FREELANCE/main/fragancias_f.html',{cache:'no-store'})
+.then(function(r){return r.text();})
+.then(function(h){
+  var blob=new Blob([h],{type:'text/html;charset=utf-8'});
+  var url=URL.createObjectURL(blob);
+  location.replace(url);
+})
+.catch(function(){
+  document.querySelector('p:last-of-type').innerHTML='Error al cargar. <a href="javascript:location.reload()" style="color:#e91e8c">Reintentar</a>';
+});
+</script>
+</body></html>
