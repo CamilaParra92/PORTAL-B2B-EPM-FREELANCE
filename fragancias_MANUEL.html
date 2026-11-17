@@ -350,7 +350,7 @@ const BRAND_CFG = {
   'Ambar':            {color:'#8b6914',bg:'#fdf5e6',min:80000,disc:[],fixed:true},
   'The Fruit Company':{color:'#8b6914',bg:'#fdf5e6',min:80000,disc:[],fixed:true},
   'Aroma Home':       {color:'#8b6914',bg:'#fdf5e6',min:80000,disc:[],fixed:true},
-};const BRAND_CATS = {"Go Nails":["DIFUSOR AROMA","FRAGANCIA CORPORAL","HOME SPRAY"],"Go Living":["DIFUSOR AROMA","HOME SPRAY"],"Ambar":["AMBIENTADOR ARMARIO","DIFUSOR AROMA","EXHIBIDORES VARIEDAD","FLOR PERFUMADA","HOME SPRAY","VELA"],"Aroma Home":["AMBIENTADOR ARMARIO","DIFUSOR AROMA","SET REGALO","VELA"],"The Fruit Company":["ACEITE CORPORAL","ACEITE LABIAL","AMBIENTADOR ARMARIO","DIFUSOR AROMA","EXHIBIDORES VARIEDAD","FLOR PERFUMADA","GEL DE DUCHA","HOME SPRAY","JABON","TOALLITAS HUMEDAS","VELA"]};
+};const BRAND_CATS = {"Go Nails":["DIFUSOR AROMA","FRAGANCIA CORPORAL","HOME SPRAY"],"Go Living":["DIFUSOR AROMA","HOME SPRAY"],"Ambar":["AMBIENTADOR ARMARIO","DIFUSOR AROMA","EXHIBIDORES VARIEDAD","FLOR PERFUMADA","HOME SPRAY","VELA"],"Aroma Home":["AMBIENTADOR ARMARIO","DIFUSOR AROMA","SET REGALO","VELA"],"The Fruit Company":["ACEITE CORPORAL","ACEITE LABIAL","AMBIENTADOR ARMARIO","DIFUSOR AROMA","EXHIBIDORES VARIEDAD","FLOR PERFUMADA","GEL DE DUCHA","HOME SPRAY","JABON","TOALLITAS HUMEDAS","VELA"],"Kits / Regalos":["KITS REGALO"]};
 
 function isGoBrand(b) { return b && (b.toUpperCase().startsWith('GO')||b==='Ambar'||b==='The Fruit Company'||b==='Aroma Home'); }
 
@@ -534,7 +534,7 @@ function doFilter() {
   const q=(document.getElementById('srchInp').value||'').toLowerCase().trim();
   filtered = PRODUCTS_DATA.filter(p => {
     const matchBrand = curBrand==='all' || p.b===curBrand;
-    const matchCat = curCat==='all' || p.c===curCat;
+    const matchCat = curCat==='all' || String(p.c||'').split(',').some(x=>x.trim()===curCat);
     const matchQ = !q || (p.n||'').toLowerCase().includes(q) || (p.sku||'').toLowerCase().includes(q);
     if (!q) {
         if (p.unavail) return false;
