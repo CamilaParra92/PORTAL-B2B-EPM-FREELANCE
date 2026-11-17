@@ -537,9 +537,9 @@ function renderCatsBar() {
 function doFilter() {
   const q=(document.getElementById('srchInp').value||'').toLowerCase().trim();
   filtered = PRODUCTS_DATA.filter(p => {
-    const matchBrand = curBrand==='all' || p.b===curBrand;
+    const matchBrand = curBrand==='all' || String(p.b||'')===curBrand;
     const matchCat = curCat==='all' || String(p.c||'').split(',').some(x=>x.trim()===curCat);
-    const matchQ = !q || (p.n||'').toLowerCase().includes(q) || (p.sku||'').toLowerCase().includes(q);
+    const matchQ = !q || String(p.n||'').toLowerCase().includes(q) || String(p.sku||'').toLowerCase().includes(q);
     if (!q) {
         if (p.unavail) return false;
         if (['Bluesky','Go Nails','Go Hair','Go Paw','Go Living'].includes(p.b) && p.stock<12) return false;
