@@ -616,7 +616,7 @@ function sid(s){return s.replace(/[^a-zA-Z0-9]/g,'_');}
 function chgQ(sku,d){const i=document.getElementById('qi-'+sid(sku));if(i)setQ(sku,Math.max(0,(parseInt(i.value)||0)+d));}
 function setQ(sku,val){
   const qty=Math.max(0,parseInt(val)||0);
-  const p=PRODUCTS_DATA.find(x=>x.sku===sku); if(!p)return;
+  const p=PRODUCTS_DATA.find(x=>String(x.sku)===String(sku)); if(!p)return;
   if(qty>0)cart[sku]={product:p,qty};else delete cart[sku];
   const i=document.getElementById('qi-'+sid(sku)); if(i)i.value=qty;
   const a=document.getElementById('ab-'+sid(sku));
