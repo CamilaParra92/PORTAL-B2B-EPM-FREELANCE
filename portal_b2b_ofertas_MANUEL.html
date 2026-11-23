@@ -146,7 +146,7 @@ textarea{resize:vertical;min-height:60px}
 </style>
 </head>
 <body>
-<div id="ofertaBanner" style="background:#c62828;color:#fff;text-align:center;padding:10px 20px;font-size:14px;font-weight:700;letter-spacing:.3px;position:sticky;top:0;z-index:9999">&#x1F3F7;&#xFE0F; PORTAL DE OFERTAS ESPECIALES &#x1F516; Los precios mostrados son precios de oferta &mdash; V&aacute;lidas del 09/11/2026 al 15/11/2026</div>
+<div id="ofertaBanner" style="background:#c62828;color:#fff;text-align:center;padding:10px 20px;font-size:14px;font-weight:700;letter-spacing:.3px;position:sticky;top:0;z-index:9999">&#x1F3F7;&#xFE0F; PORTAL DE OFERTAS ESPECIALES &#x1F516; Los precios mostrados son precios de oferta &mdash; V&aacute;lidas del 23/11/2026 al 06/12/2026</div>
 <header>
   <div>
     <div class="logo-txt">EPM <span>Mayorista</span></div>
@@ -352,7 +352,7 @@ const BRAND_CFG = {
   'The Fruit Company':{color:'#8b6914',bg:'#fdf5e6',min:80000,disc:[],fixed:true},
   'Aroma Home':       {color:'#8b6914',bg:'#fdf5e6',min:80000,disc:[],fixed:true},
 };
-const OFERTA_CONFIG={volDesc:10,desde:'09/11/2026',hasta:'15/11/2026'};
+const OFERTA_CONFIG={volDesc:10,desde:'23/11/2026',hasta:'06/12/2026'};
 (function(){var p=OFERTA_CONFIG.hasta.split('/');var fin=new Date(+p[2],+p[1]-1,+p[0]);fin.setDate(fin.getDate()+1);window._ofertaVencida=new Date()>=fin;if(window._ofertaVencida){document.addEventListener('DOMContentLoaded',function(){var bs=document.querySelectorAll('div[style*="sticky"]');bs.forEach(function(b){b.style.background='#7f0000';b.innerHTML='&#x26D4; OFERTAS CERRADAS &mdash; El per&iacute;odo finaliz&oacute; el '+OFERTA_CONFIG.hasta+'. Espera las pr&oacute;ximas ofertas.';});});}})();
 const BRAND_CATS = {"Nail Pro":["ACRILICOS","EFECTOS","ESMALTE PERMANENTE 15ML","ESMALTE PERMANENTE 8ML","ESMALTES ESPECIALES","GEL CONSTRUCTOR","GEL PAINT","INSUMOS MANICURE","LAMPARA","POLYGEL","PREPARADORES","SOFT GEL","TORNO"],"Go Nails":["ACEITE CUTICULA","CREMA CORPORAL","CREMA MANOS Y PIES","DIFUSOR AROMA","EXFOLIANTE","FRAGANCIA CORPORAL","GEL DE DUCHA","HIGIENIZANTE","HOME SPRAY","INSUMOS MANICURE","JABON","LAMPARA","MANTECA CORPORAL","SKIN","SOFT GEL","KITS REGALO"],"Go Hair":["CAPILAR","KITS REGALO"],"Go Paw":["MASCOTAS"],"Bluesky":["EFECTOS","ESMALTE PERMANENTE 15ML","ESMALTES ESPECIALES","GEL CONSTRUCTOR","INSUMOS MANICURE","POLYGEL","PREPARADORES"],"Artistic":["ESMALTE PERMANENTE 15ML","ESMALTE TRADICIONAL 15ML","INSUMOS MANICURE","LAMPARA","PREPARADORES","SOFT GEL","TORNO"],"Avry Beauty":["CREMA MANOS Y PIES","HIDRATACION","JELLY SPA"],"Go Living":["DIFUSOR AROMA","HOME SPRAY"],"Ambar":["AMBIENTADOR ARMARIO","DIFUSOR AROMA","EXHIBIDORES VARIEDAD","FLOR PERFUMADA","HOME SPRAY","VELA"],"The Fruit Company":["ACEITE CORPORAL","ACEITE LABIAL","AMBIENTADOR ARMARIO","DIFUSOR AROMA","EXHIBIDORES VARIEDAD","FLOR PERFUMADA","GEL DE DUCHA","HOME SPRAY","JABON","TOALLITAS HUMEDAS","VELA"],"Aroma Home":["AMBIENTADOR ARMARIO","DIFUSOR AROMA","VELA"],"Kits / Regalos":["KITS REGALO"]};
 
