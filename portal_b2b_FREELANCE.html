@@ -538,7 +538,7 @@ function doFilter() {
     const matchQ = !q || String(p.n||'').toLowerCase().includes(q) || String(p.sku||'').toLowerCase().includes(q);
     if (!q) {
         if (p.unavail) return false;
-        if (['Bluesky','Go Nails','Go Hair','Go Paw','Go Living'].includes(p.b) && p.stock<12) return false;
+        if (['Bluesky','Go Nails','Go Hair','Go Paw','Go Living'].includes(p.b) && p.stock<12 && p.c!=='LAMPARA') return false;
         else if (p.stock<6) return false;
       }
     return matchBrand && matchCat && matchQ;
